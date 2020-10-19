@@ -1,0 +1,372 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="1Q-start">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Patient details</h1>
+
+    <form class="form" action="index" method="post">
+
+      <div class="govuk-form-group">
+<h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+    What is your patients full name?
+  </label>
+</h1>
+<div class="govuk-form-group">
+<input class="govuk-input govuk-input--width-20" id="event-name" name="patient-name" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        What is your patients date of birth?
+      </h1>
+    </legend>
+    <div id="dob-hint" class="govuk-hint">
+      For example, 31 3 1980
+    </div>
+    <div class="govuk-date-input" id="dob">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob" type="text" autocomplete="bday-day" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob" type="text" autocomplete="bday-month" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob" type="text" autocomplete="bday-year" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+    </div>
+
+<div class="govuk-!-padding-bottom-6"></div>
+
+      <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Address
+      </h1>
+    </legend>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-1">
+        Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+      </label>
+      <input class="govuk-input" id="address-line-1" name="patient-address-line-1" type="text"></div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-2">
+        <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+      </label>
+      <input class="govuk-input" id="address-line-2" name="address-line-2" type="text"></div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-town">
+        Town or city
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text"></div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-county">
+        County
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="address-postcode">
+        Postcode
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text"></div>
+
+    <div class="govuk-!-padding-bottom-7"></div>
+
+      <h1 class="govuk-heading-xl">Diagnosis</h1>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+              Please can you provide detail into your patients main diagnosis?
+            </label>
+          </h1>
+          <div id="more-detail-hint" class="govuk-hint">
+            Include any other diagnoses that are relevant.
+          </div>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Date of diagnosis (if known)
+      </h1>
+    </legend>
+    <div id="dob-hint" class="govuk-hint">
+      For example, 3 2020
+    </div>
+    <div class="govuk-date-input" id="dob">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" autocomplete="bday-month" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" autocomplete="bday-year" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+    </div>
+
+    <div class="govuk-!-padding-bottom-7"></div>
+
+    <div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <h1 class="govuk-fieldset__heading">
+    Is the patient aware of their prognosis?
+  </h1>
+</legend>
+<div class="govuk-radios govuk-radios--inline">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+    <label class="govuk-label govuk-radios__label" for="changed-name">
+      Yes
+    </label>
+  </div>
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+      No
+    </label>
+  </div>
+</div>
+
+<div class="govuk-!-padding-bottom-6"></div>
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+Who asked you to complete this form?
+</h1>
+</legend>
+<div class="govuk-radios govuk-radios--inline">
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+<label class="govuk-label govuk-radios__label" for="changed-name">
+  The patient
+</label>
+</div>
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+<label class="govuk-label govuk-radios__label" for="changed-name-2">
+  A representative of the patient
+</label>
+</div>
+</div>
+
+<div class="govuk-!-padding-bottom-9"></div>
+
+    <h1 class="govuk-heading-xl">Clinical</h1>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail-1">
+      Give details of the clinical features that indicate a severe progressive condition.
+    </label>
+  </h1>
+  <div id="more-detail-hint" class="govuk-hint">
+    For example: the rate of progression, recurrence, staging, tumour markers, CD4 count and viral load, bulbar involvement, respiratory problems, heart failure.
+  </div>
+  <textarea class="govuk-textarea" id="more-detail-1" name="more-detail-1" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+
+</div>
+
+</div>
+
+<div class="govuk-!-padding-bottom-1"></div>
+
+    <h1 class="govuk-heading-xl">Treatment</h1>
+
+    <div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail-2">
+      Give details of treatments
+    </label>
+  </h1>
+  <div id="more-detail-hint-2" class="govuk-hint">
+    Including the dates and the patient’s response to the treatment.
+  </div>
+  <textarea class="govuk-textarea" id="more-detail-2" name="more-detail-2" rows="5" aria-describedby="more-detail-hint-2"></textarea>
+</div>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail-3">
+      Planned interventions or treatments
+    </label>
+  </h1>
+  <div id="more-detail-hint-3" class="govuk-hint">
+    If there are any interventions or treatments planned which could significantly change the progression of the patient’s condition, give details.
+  </div>
+  <textarea class="govuk-textarea" id="more-detail-3" name="more-detail-3" rows="5" aria-describedby="more-detail-hint-3"></textarea>
+</div>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+<h1 class="govuk-heading-xl">Your details</h1>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          I am the patient’s:
+        </h1>
+      </legend>
+      <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+            General Practitioner
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+            MacMillan nurse
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+            GMC registered consultant
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+          <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+            Other
+          </label>
+        </div>
+      </div>
+
+      <div class="govuk-!-padding-bottom-7"></div>
+
+      <div class="govuk-form-group">
+<h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+    What is your full name?
+  </label>
+</h1>
+<div class="govuk-form-group">
+<input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text"></div>
+
+
+<div class="govuk-form-group">
+<h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+What is your phone number?
+</label>
+</h1>
+<div class="govuk-form-group">
+<input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text"></div>
+
+<div class="govuk-form-group">
+<h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+What is your email address?
+</label>
+</h1>
+<div class="govuk-form-group">
+<input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text"></div>
+
+<div class="govuk-!-padding-bottom-2"></div>
+
+</div>
+</div>
+
+<fieldset class="govuk-fieldset">
+<legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+<h1 class="govuk-fieldset__heading">
+  What is your address?
+</h1>
+</legend>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="address-line-1">
+  Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+</label>
+<input class="govuk-input" id="address-line-1" name="address-line-1" type="text"></div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="address-line-2">
+  <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+</label>
+<input class="govuk-input" id="address-line-2" name="address-line-2" type="text"></div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="address-town">
+  Town or city
+</label>
+<input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text"></div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="address-county">
+  County
+</label>
+<input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
+
+<div class="govuk-form-group">
+<label class="govuk-label" for="address-postcode">
+  Postcode
+</label>
+<input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text"></div>
+
+<div class="govuk-!-padding-bottom-7"></div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Declaration</h1>
+
+    <form class="form" action="index" method="post">
+
+      <p>You confirm that:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the person named in this report is your patient</li>
+        <li>this is a full report of their condition and treatment</li>
+      </ul>
+
+</div>
+</div>
+
+<div class="govuk-!-padding-bottom-4"></div>
+
+      <button class="govuk-button" data-module="govuk-button">I agree, send the report</button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}
