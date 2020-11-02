@@ -18,21 +18,18 @@
       <form class="form" action="diagnosis-1" method="post">
 
         <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
-              Please can you provide detail into your patients main diagnosis?
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+            Include details of the patient’s main diagnosis, and any others that are relevant
             </label>
           </h1>
-          <div id="more-detail-hint" class="govuk-hint">
-            Include any other diagnoses that are relevant.
-          </div>
           <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
         </div>
 
         <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <h1 class="govuk-fieldset__heading">
-        Date of diagnosis (if known)
+        Date of diagnosis
       </h1>
     </legend>
     <div id="dob-hint" class="govuk-hint">
@@ -53,6 +50,16 @@
           </label>
           <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" autocomplete="bday-year" pattern="[0-9]*" inputmode="numeric"></div>
       </div>
+    </div>
+
+    <div class="govuk-!-padding-bottom-6"></div>
+
+    <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+        Other relevant diagnoses? (optional)
+      </label>
+      </h1>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
 
   </fieldset>
