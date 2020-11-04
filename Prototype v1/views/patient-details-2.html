@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="patient-details-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Patient details</h1>
+
+      <form class="form" action="diagnosis" method="post">
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+              National Insurance number
+            </label>
+          </h1>
+          <div id="dob-hint" class="govuk-hint">
+            (This form is processed quicker if you have it)
+          </div>
+          <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

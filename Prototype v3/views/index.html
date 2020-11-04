@@ -1,0 +1,50 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        DS1500 Prototype Versions</h1>
+
+        <h2 class="govuk-heading-m">Please find the DS1500 prototype versions currently under test and refinement</h2>
+
+      <p> Also known as 'Report that a patient could live less than 6 months'.</p>
+
+      <p> The Baseline Prototypes are developed leveraging the questions from <a href="https://temp-ds1500.herokuapp.com/index">Version 08a</a> from the previous DS1500 Build.</p>
+
+
+      <p> For any questions, please contact <a href="mailto:david.doherty@engineering.digital.dwp.gov.uk">David Doherty</a>.
+      </p>
+
+      <h2 class="govuk-heading-m">DS1500 Baseline Prototypes</h2>
+
+      <form class="form" action="start" method="post">
+        <div class="govuk-inset-text"> The Baseline Prototype v1 is designed with <b>several questions per page</b></div>
+        <button class="govuk-button" data-module="govuk-button">Baseline Prototype v1</button></form>
+
+      <form class="form" action="1Q-start" method="post">
+        <div class="govuk-inset-text"> The Baseline Prototype v2 is designed with <b>1 question per page</b></div>
+          <button class="govuk-button" data-module="govuk-button">Baseline Prototype v2</button></form>
+
+      <form class="form" action="1form-start" method="post">
+        <div class="govuk-inset-text"> The Baseline Prototype v3 is designed with <b>all questions on one single page</b></div>
+          <button class="govuk-button" data-module="govuk-button">Baseline Prototype v3</button></form>
+
+          <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              The above forms are only prototypes and are not for productions!
+            </strong>
+          </div>
+
+    </div>
+  </div>
+
+{% endblock %}
