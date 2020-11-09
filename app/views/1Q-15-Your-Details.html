@@ -25,34 +25,34 @@
       </legend>
 
       <div class="govuk-form-group">
-        <label class="govuk-label" for="address-line-1">
+        <label class="govuk-label" for="your-address">
           Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
         </label>
-        <input class="govuk-input" id="address-line-1" name="address-line-1" type="text"></div>
+        <input class="govuk-input" id="your-address" name="your-address" type="text" value="{{ data['your-address'] }}"></div>
 
       <div class="govuk-form-group">
-        <label class="govuk-label" for="address-line-2">
+        <label class="govuk-label" for="your-address-1">
           <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
         </label>
-        <input class="govuk-input" id="address-line-2" name="address-line-2" type="text"></div>
+        <input class="govuk-input" id="your-address-1" name="your-address-1" type="text" value="{{ data['your-address-1'] }}"></div>
 
       <div class="govuk-form-group">
-        <label class="govuk-label" for="address-town">
+        <label class="govuk-label" for="your-town">
           Town or city
         </label>
-        <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text"></div>
+        <input class="govuk-input govuk-!-width-two-thirds" id="your-town" name="your-town" type="text" value="{{ data['your-town'] }}"></div>
 
       <div class="govuk-form-group">
-        <label class="govuk-label" for="address-county">
+        <label class="govuk-label" for="your-county">
           County
         </label>
-        <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
+        <input class="govuk-input govuk-!-width-two-thirds" id="your-county" name="your-county" type="text" value="{{ data['your-county'] }}"></div>
 
       <div class="govuk-form-group">
-        <label class="govuk-label" for="address-postcode">
+        <label class="govuk-label" for="your-post-code">
           Postcode
         </label>
-        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text"></div>
+        <input class="govuk-input govuk-input--width-10" id="your-post-code" name="your-post-code" type="text" value="{{ data['your-post-code'] }}"></div>
 
     </fieldset>
 

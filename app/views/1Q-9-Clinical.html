@@ -18,14 +18,14 @@
       <form class="form" action="1Q-10-Treatment" method="post">
 
         <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="clinical-features">
               Give details of the clinical features that indicate a severe progressive condition.
             </label>
           </h1>
           <div id="more-detail-hint" class="govuk-hint">
             For example: the rate of progression, recurrence, staging, tumour markers, CD4 count and viral load, bulbar involvement, respiratory problems, heart failure.
           </div>
-          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+          <textarea class="govuk-textarea" id="clinical-features" name="clinical-features" rows="5" aria-describedby="more-detail-hint" value="{{ data['clinical-features'] }}"></textarea>
         </div>
 
 </div>
