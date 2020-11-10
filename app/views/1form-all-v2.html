@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="1form-start">Back</a>
+  <a class="govuk-back-link" href="1form-start-v2">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -354,6 +354,36 @@ Your Trust
 
     <div class="govuk-!-padding-bottom-6"></div>
 
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="have-you-checked-your-answers-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            Check your answers
+          </h1>
+        </legend>
+        <div id="changed-name-hint" class="govuk-hint">
+          Have you checked all the information you have entered for errors?
+        </div>
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="have-you-checked-your-answers" name="have-you-checked-your-answers" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="have-you-checked-your-answers">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="have-you-checked-your-answers-1" name="have-you-checked-your-answers" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="have-you-checked-your-answers-1">
+              No
+            </label>
+          </div>
+        </div>
+
+        <div class="govuk-!-padding-bottom-3"></div>
+
+      </fieldset>
+    </div>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
@@ -371,7 +401,7 @@ Your Trust
 </div>
 </div>
 
-<div class="govuk-!-padding-bottom-4"></div>
+<div class="govuk-!-padding-bottom-5"></div>
 
       <button class="govuk-button" data-module="govuk-button">I agree - send the report</button>
 
