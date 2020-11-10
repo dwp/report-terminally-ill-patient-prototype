@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="1Q-16a-check-your-answers">Back</a>
+  <a class="govuk-back-link" href="your-details-2">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -25,9 +25,25 @@
             {{ data['patient-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-1-patient-details">
+            <a href="patient-details">
               Change
               <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['patient-birth-day'] }}
+            {{ data['patient-birth-month'] }}
+            {{ data['patient-birth-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="patient-details">
+              Change
+              <span class="govuk-visually-hidden"> date of birth</span>
             </a>
           </dd>
         </div>
@@ -43,25 +59,9 @@
             <br>{{ data['patient-post-code'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-2-patient-details">
+            <a href="patient-details-1">
               Change
               <span class="govuk-visually-hidden"> address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Date of birth
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['patient-birth-day'] }}
-            {{ data['patient-birth-month'] }}
-            {{ data['patient-birth-year'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="1Q-3-patient-details">
-              Change
-              <span class="govuk-visually-hidden"> date of birth</span>
             </a>
           </dd>
         </div>
@@ -73,7 +73,7 @@
             {{ data['national-insurance-number'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-4-patient-details">
+            <a href="patient-details-2">
               Change
               <span class="govuk-visually-hidden"> national insurance number</span>
             </a>
@@ -92,7 +92,7 @@
             {{ data['diagnosis'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-5-Diagnosis">
+            <a href="diagnosis">
               Change
               <span class="govuk-visually-hidden"> diagnosis</span>
             </a>
@@ -107,7 +107,7 @@
             {{ data['diagnosis-year'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-6-Diagnosis">
+            <a href="diagnosis">
               Change
               <span class="govuk-visually-hidden"> diagnosis date</span>
             </a>
@@ -121,7 +121,7 @@
             {{ data['other-diagnosis'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-6-1-Diagnosis">
+            <a href="diagnosis">
               Change
               <span class="govuk-visually-hidden"> other diagnosis</span>
             </a>
@@ -135,7 +135,7 @@
             {{ data['patient-awareness'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-7-Diagnosis">
+            <a href="diagnosis-1">
               Change
               <span class="govuk-visually-hidden"> Is the patient aware of their prognosis</span>
             </a>
@@ -149,7 +149,7 @@
             {{ data['form-request'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-7-Diagnosis">
+            <a href="diagnosis-1">
               Change
               <span class="govuk-visually-hidden"> Who asked you to complete this form</span>
             </a>
@@ -168,7 +168,7 @@
             {{ data['clinical-features'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-9-Clinical">
+            <a href="clinical-features">
               Change
               <span class="govuk-visually-hidden"> clinical features</span>
             </a>
@@ -187,7 +187,7 @@
             {{ data['treatment-details'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-10-Treatment">
+            <a href="treatment">
               Change
               <span class="govuk-visually-hidden"> treatment details</span>
             </a>
@@ -201,7 +201,7 @@
             {{ data['treatment-further-details'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-11-Treatment">
+            <a href="treatment">
               Change
               <span class="govuk-visually-hidden"> other treatments</span>
             </a>
@@ -217,10 +217,10 @@
             I am the patient’s
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['your-role'] }}
+            {{ data['your-relationship'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-12-Your-Details">
+            <a href="your-details">
               Change
               <span class="govuk-visually-hidden"> your relationship to patient</span>
             </a>
@@ -234,7 +234,7 @@
             {{ data['your-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-13-Your-Details">
+            <a href="your-details-1">
               Change
               <span class="govuk-visually-hidden"> your name</span>
             </a>
@@ -248,9 +248,23 @@
             {{ data['your-trust'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-14-Your-Details">
+            <a href="your-details-1">
               Change
               <span class="govuk-visually-hidden"> your trust</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['your-phone-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="your-details-1">
+              Change
+              <span class="govuk-visually-hidden"> your phone number</span>
             </a>
           </dd>
         </div>
@@ -266,23 +280,9 @@
             <br>{{ data['your-post-code'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="1Q-15-Your-Details">
+            <a href="your-details-2">
               Change
               <span class="govuk-visually-hidden"> your address</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Your phone number
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['your-phone-number'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="1Q-16-Your-Details">
-              Change
-              <span class="govuk-visually-hidden"> your phone number</span>
             </a>
           </dd>
         </div>
