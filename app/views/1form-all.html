@@ -13,18 +13,21 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">Patient details</h1>
+    <h1 class="govuk-heading-xl">Report a terminally ill patient</h1>
 
     <p>This page can't be saved. If you leave this page before pressing submit any changes you have made will be lost.</p>
-    <div class="govuk-!-padding-bottom-5"></div>
+
+    <h2 class="govuk-heading-l">Patient details</h2>
+
+    <div class="govuk-!-padding-bottom-2"></div>
 
     <form class="form" action="index" method="post">
 
       <div class="govuk-form-group">
-<h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+<h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
     Name
   </label>
-</h2>
+</h3>
 <div class="govuk-form-group">
 <input class="govuk-input govuk-input--width-20" id="event-name" name="patient-name" type="text">
 </div>
@@ -33,9 +36,9 @@
 
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <h2 class="govuk-fieldset__heading">
+            <h3 class="govuk-fieldset__heading">
               Address
-            </h2>
+            </h3>
           </legend>
 
           <div class="govuk-form-group">
@@ -73,9 +76,9 @@
           <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-      <h2 class="govuk-fieldset__heading">
+      <h3 class="govuk-fieldset__heading">
         Date of birth
-      </h2>
+      </h3>
     </legend>
     <div id="dob-hint" class="govuk-hint">
       For example, 31 3 1980
@@ -107,10 +110,10 @@
     <div class="govuk-!-padding-bottom-7"></div>
 
     <div class="govuk-form-group">
-      <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+      <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
         National Insurance Number
       </label>
-      </h2>
+      </h3>
       <div id="national-insurance-number-hint" class="govuk-hint">
         (This form is processed quicker if you have it)
       </div>
@@ -119,22 +122,22 @@
 
     <div class="govuk-!-padding-bottom-7"></div>
 
-      <h1 class="govuk-heading-l">Diagnosis</h1>
+      <h2 class="govuk-heading-l">Diagnosis</h2>
 
         <div class="govuk-form-group">
-          <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+          <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
             Include details of the patient’s main diagnosis, and any others that are relevant
             </label>
-          </h2>
+          </h3>
           <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
         </div>
 
         <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-      <h2 class="govuk-fieldset__heading">
+      <h3 class="govuk-fieldset__heading">
         Date of diagnosis
-      </h2>
+      </h3>
     </legend>
     <div id="dob-hint" class="govuk-hint">
       For example, 3 2020
@@ -159,19 +162,19 @@
     <div class="govuk-!-padding-bottom-7"></div>
 
     <div class="govuk-form-group">
-      <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+      <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
         Other relevant diagnoses? (optional)
       </label>
-      </h2>
+      </h3>
       <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
 
     <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-  <h2 class="govuk-fieldset__heading">
+  <h3 class="govuk-fieldset__heading">
     Is the patient aware of their prognosis?
-  </h2>
+  </h3>
 </legend>
 <div class="govuk-radios govuk-radios--inline">
   <div class="govuk-radios__item">
@@ -193,9 +196,9 @@
 <div class="govuk-form-group">
 <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-<h2 class="govuk-fieldset__heading">
+<h3 class="govuk-fieldset__heading">
 Who asked you to complete this form?
-</h2>
+</h3>
 </legend>
 <div class="govuk-radios govuk-radios--inline">
 <div class="govuk-radios__item">
@@ -214,13 +217,13 @@ Who asked you to complete this form?
 
 <div class="govuk-!-padding-bottom-9"></div>
 
-    <h1 class="govuk-heading-l">Clinical features</h1>
+    <h2 class="govuk-heading-l">Clinical features</h2>
 
 <div class="govuk-form-group">
-  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-1">
+  <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-1">
       Give details of the clinical features that indicate a severe progressive condition.
     </label>
-  </h2>
+  </h3>
   <div id="more-detail-hint" class="govuk-hint">
     For example: the rate of progression, recurrence, staging, tumour markers, CD4 count and viral load, bulbar involvement, respiratory problems, heart failure.
   </div>
@@ -233,13 +236,13 @@ Who asked you to complete this form?
 
 <div class="govuk-!-padding-bottom-1"></div>
 
-    <h1 class="govuk-heading-l">Treatment</h1>
+    <h2 class="govuk-heading-l">Treatment</h2>
 
     <div class="govuk-form-group">
-  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-2">
+  <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-2">
     Give details of treatments
     </label>
-  </h2>
+  </h3>
       <p>Including the dates and the patient's response to the treatment.</p>
   <textarea class="govuk-textarea" id="more-detail-2" name="more-detail-2" rows="5" aria-describedby="more-detail-hint-2"></textarea>
 </div>
@@ -251,14 +254,14 @@ Who asked you to complete this form?
 
 <div class="govuk-!-padding-bottom-4"></div>
 
-<h1 class="govuk-heading-l">Your details</h1>
+<h2 class="govuk-heading-l">Your details</h2>
 
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-        <h2 class="govuk-fieldset__heading">
+        <h3 class="govuk-fieldset__heading">
           I am the patient’s:
-        </h2>
+        </h3>
       </legend>
       <div class="govuk-radios">
         <div class="govuk-radios__item">
@@ -284,19 +287,19 @@ Who asked you to complete this form?
       <div class="govuk-!-padding-bottom-7"></div>
 
       <div class="govuk-form-group">
-<h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+<h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
     Your Name
   </label>
-</h2>
+</h3>
 <div class="govuk-form-group">
 <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text"></div>
 
 
 <div class="govuk-form-group">
-<h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+<h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
 Your Trust
 </label>
-</h2>
+</h3>
 <div class="govuk-form-group">
 <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text"></div>
 
@@ -307,9 +310,9 @@ Your Trust
 
 <fieldset class="govuk-fieldset">
 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-<h2 class="govuk-fieldset__heading">
+<h3 class="govuk-fieldset__heading">
   What is your address?
-</h2>
+</h3>
 </legend>
 
 <div class="govuk-form-group">
@@ -345,10 +348,10 @@ Your Trust
 <div class="govuk-!-padding-bottom-1"></div>
 
   <div class="govuk-form-group">
-    <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+    <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
       Your phone number
     </label>
-    </h2>
+    </h3>
     <div class="govuk-form-group">
       <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text"></div>
 
@@ -357,7 +360,7 @@ Your Trust
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Declaration</h1>
+    <h2 class="govuk-heading-l">Declaration</h2>
 
     <form class="form" action="index" method="post">
 
