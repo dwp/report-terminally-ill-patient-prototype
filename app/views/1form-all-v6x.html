@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="1form-start-v5">Back</a>
+  <a class="govuk-back-link" href="1form-start-v6">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -15,13 +15,19 @@
 
     <h1 class="govuk-heading-xl">Report a terminally ill patient</h1>
 
-    <p>This page can't be saved. If you leave this page before pressing submit any changes you have made will be lost.</p>
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        This page can't be saved. If you leave this page before pressing submit any changes you have made will be lost.
+      </strong>
+    </div>
 
     <h2 class="govuk-heading-l">Patient details</h2>
 
     <div class="govuk-!-padding-bottom-2"></div>
 
-    <form class="form" action="1form-all-check-your-answers-v5" method="post">
+    <form class="form" action="1form-all-check-your-answers-v6" method="post">
 
       <div class="govuk-form-group">
 <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
@@ -249,8 +255,7 @@
     Give details of treatments
     </label>
   </h3>
-      <div id="more-detail-hint" class="govuk-hint">
-        Including the dates and the patient's response to the treatment.</div>
+      <p>Including the dates and the patient's response to the treatment.</p>
   <textarea class="govuk-textarea" id="more-detail-2" name="more-detail-2" rows="5" aria-describedby="more-detail-hint-2"></textarea>
 </div>
 
@@ -369,7 +374,7 @@ Your Trust
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="1form-all-check-your-answers-v5" method="post">
+    <form class="form" action="1form-all-check-your-answers-v6" method="post">
 
 </div>
 </div>
