@@ -1,16 +1,16 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Start page example
+  Start page
 {% endblock %}
 
 {% block header %}
   <!-- Blank header with no service name for the start page -->
   {{ govukHeader() }}
+
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="index">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -18,14 +18,15 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        {% if serviceName %} {{ serviceName }} {% endif %}
+        Report a terminally ill patient (form DS1500)
       </h1>
 
-      <p>Use this service to tell the Department for Work and Pensions (DWP) that a patient:</p>
+      <p>Use this service to tell the Department for Work and Pensions (DWP) that:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>has a severe progressive condition</li>
-        <li>could live less than 6 months</li>
+        <li>a patient has a severe progressive condition</li></ul><p>and</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>you would not be surprised if they were to live less than 6 months</li>
       </ul>
 
       <p>Also use this service to download a copy of the information you give for your own records.</p>

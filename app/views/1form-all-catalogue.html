@@ -15,17 +15,22 @@
 
     <h1 class="govuk-heading-xl">Report a terminally ill patient</h1>
 
-    <p>This page can't be saved. If you leave this page before pressing submit any changes you have made will be lost.</p>
-
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        This page can not be saved. If you leave this page before pressing submit, any entries you have made will be lost.
+      </strong>
+    </div>
     <h2 class="govuk-heading-l">Patient details</h2>
 
     <div class="govuk-!-padding-bottom-2"></div>
 
-    <form class="form" action="index" method="post">
+    <form class="form" action="1form-all-check-your-answers-catalogue" method="post">
 
       <div class="govuk-form-group">
 <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
-    Name
+    Full Name
   </label>
 </h3>
 <div class="govuk-form-group">
@@ -33,42 +38,17 @@
 </div>
         <div class="govuk-!-padding-bottom-1"></div>
 
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <h3 class="govuk-fieldset__heading">
-              Address
-            </h3>
-          </legend>
+        <div class="govuk-form-group">
+          <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="patient-address">
+            Address
+          </label>
+          </h3>
+          <textarea class="govuk-textarea" id="patient-address" name="patient-address" rows="5" aria-describedby="patient-address-hint"></textarea>
+        </div>
 
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="address-line-1">
-              Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
-            </label>
-            <input class="govuk-input" id="address-line-1" name="patient-address-line-1" type="text"></div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="address-line-2">
-              <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
-            </label>
-            <input class="govuk-input" id="address-line-2" name="address-line-2" type="text"></div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="address-town">
-              Town or city
-            </label>
-            <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text"></div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="address-county">
-              County
-            </label>
-            <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
-
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="address-postcode">
-              Postcode
-            </label>
-            <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text"></div>
+        <div class="govuk-form-group">
+          <h3 class="govuk-heading-m">Postcode</h3>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
 
           <div class="govuk-!-padding-bottom-3"></div>
 
@@ -170,55 +150,87 @@
 
     <div class="govuk-!-padding-bottom-3"></div>
 
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-        <h1 class="govuk-fieldset__heading">
-          Is the patient aware of their prognosis?
-        </h1>
-      </legend>
-      <div class="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="prognosis" name="prognosis" type="radio" value="Yes">
-          <label class="govuk-label govuk-radios__label" for="prognosis">
-            Yes
-          </label>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h3 class="govuk-fieldset__heading">
+            Is the patient aware of their prognosis?
+          </h3>
+        </legend>
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="prognosis" name="prognosis" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="prognosis">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="prognosis-2" name="prognosis" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="prognosis">
+              No
+            </label>
+          </div>
         </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="prognosis-2" name="prognosis" type="radio" value="No">
-          <label class="govuk-label govuk-radios__label" for="prognosis-2">
-            No
-          </label>
-        </div>
-    </fieldset>
-  </div>
+
+      </fieldset>
+    </div>
 
 <div class="govuk-!-padding-bottom-3"></div>
 
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-        <h3 class="govuk-fieldset__heading">
-          Who asked you to complete this form?
-        </h3>
-      </legend>
-      <div class="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="representative" name="representative" type="radio" value="The patient">
-          <label class="govuk-label govuk-radios__label" for="representative">
-            The patient
-          </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="representative-2" name="representative" type="radio" value="A representative of the patient">
-          <label class="govuk-label govuk-radios__label" for="representative-2">
-            A representative of the patient
-          </label>
-        </div>
-      </div>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h3 class="govuk-fieldset__heading">
+            Who asked you to complete the form?
+          </h3>
+        </legend>
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="representative" name="representative" type="radio" value="The patient" data-aria-controls="conditional-representative">
+            <label class="govuk-label govuk-radios__label" for="representative">
+              The patient
+            </label>
+          </div>
 
-    </fieldset>
-  </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="representative-2" name="representative" type="radio" value="A representative of the patient" data-aria-controls="conditional-contact-2">
+            <label class="govuk-label govuk-radios__label" for="representative-2">
+              A representative of the patient
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+            <div class="govuk-form-group">
+              <div class="govuk-!-padding-bottom-2"></div>
+              <h4 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-1">
+                Representative details
+              </label>
+              </h4>
+              <div class="govuk-form-group">
+                <div class="govuk-!-padding-bottom-3"></div>
+                <h5 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="representative-name">
+                  Their name
+                </label>
+                </h5>
+                <input class="govuk-input" id="representative-name" name="representative-name" type="text">
+              </div>
+              <div class="govuk-!-padding-bottom-1"></div>
+              <div class="govuk-form-group">
+                <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="patient-address">
+                  Their address
+                </label>
+                </h3>
+                <textarea class="govuk-textarea" id="patient-address" name="patient-address" rows="5" aria-describedby="patient-address-hint"></textarea>
+              </div>
+
+              <div class="govuk-form-group">
+                <h3 class="govuk-heading-m">Their postcode</h3>
+                <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
+
+            </div>
+          </div>
+
+      </fieldset>
+    </div>
 </div>
 
 <div class="govuk-!-padding-bottom-6"></div>
@@ -262,39 +274,65 @@
 
 <h2 class="govuk-heading-l">Your details</h2>
 
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-        <h3 class="govuk-fieldset__heading">
-          I am the patient’s:
-        </h3>
-      </legend>
-      <div class="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-          <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-            General Practitioner
-          </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-          <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-            GMC registered consultant
-          </label>
-        </div>
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-          <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
-            Other
-          </label>
-        </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="your-role-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              I am the patient's
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="your-role" name="your-role" type="radio" value="email" data-aria-controls="conditional-your-role">
+              <label class="govuk-label govuk-radios__label" for="your-role">
+                General Practitioner
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-your-role">
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="your-role-2" name="your-role" type="radio" value="phone" data-aria-controls="conditional-your-role-2">
+              <label class="govuk-label govuk-radios__label" for="your-role-2">
+                GMC registered consultant
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-your-role-2">
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="your-role-3" name="your-role" type="radio" value="text" data-aria-controls="conditional-your-role-3">
+              <label class="govuk-label govuk-radios__label" for="your-role-3">
+                Other
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-your-role-3">
+              <div class="govuk-form-group">
+                <div class="govuk-!-padding-bottom-3"></div>
+                <h4 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="your-role-name">
+                  Please specify
+                </label>
+                </h4>
+                <input class="govuk-input" id="your-role-name" name="your-role-name" type="text">
+              </div>
+
+            </div>
+          </div>
+
+        </fieldset>
       </div>
 
-      <div class="govuk-!-padding-bottom-7"></div>
-
       <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="GMC-number">
+          Your GMC number
+        </label>
+        </h3>
+        <div class="govuk-form-group">
+          <input class="govuk-input govuk-input--width-10" id="GMC-number" name="GMC-number" type="text"></div>
+
+        <div class="govuk-form-group">
 <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="your-name">
-    Your name
+    Your full name
   </label>
 </h3>
 <div class="govuk-form-group">
@@ -311,80 +349,45 @@ Your Trust
 <div class="govuk-form-group">
   <input class="govuk-input" id="your-trust" name="your-trust" type="text" spellcheck="false" autocomplete="name">
 
-<div class="govuk-!-padding-bottom-6"></div>
+<div class="govuk-!-padding-bottom-1"></div>
 
 </div>
 </div>
 
-<fieldset class="govuk-fieldset">
-<legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-<h3 class="govuk-fieldset__heading">
-  What is your address?
-</h3>
-</legend>
+  <div class="govuk-form-group">
+    <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="patient-address">
+      Your Address
+    </label>
+    </h3>
+    <textarea class="govuk-textarea" id="patient-address" name="patient-address" rows="5" aria-describedby="patient-address-hint"></textarea>
+  </div>
 
-<div class="govuk-form-group">
-<label class="govuk-label" for="address-line-1">
-  Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
-</label>
-<input class="govuk-input" id="address-line-1" name="address-line-1" type="text"></div>
-
-<div class="govuk-form-group">
-<label class="govuk-label" for="address-line-2">
-  <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
-</label>
-<input class="govuk-input" id="address-line-2" name="address-line-2" type="text"></div>
-
-<div class="govuk-form-group">
-<label class="govuk-label" for="address-town">
-  Town or city
-</label>
-<input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text"></div>
-
-<div class="govuk-form-group">
-<label class="govuk-label" for="address-county">
-  County
-</label>
-<input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
-
-<div class="govuk-form-group">
-<label class="govuk-label" for="address-postcode">
-  Postcode
-</label>
-<input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text"></div>
+  <div class="govuk-form-group">
+    <h3 class="govuk-heading-m">Your postcode</h3>
+    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
 
 <div class="govuk-!-padding-bottom-1"></div>
 
   <div class="govuk-form-group">
-    <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+    <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="your-number">
       Your phone number
     </label>
     </h3>
     <div class="govuk-form-group">
-      <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text"></div>
+      <input class="govuk-input govuk-input--width-10" id="your-number" name="your-number" type="text"></div>
 
-    <div class="govuk-!-padding-bottom-6"></div>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-!-padding-bottom-1"></div>
 
-    <h2 class="govuk-heading-l">Declaration</h2>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="index" method="post">
+        <form class="form" action="1form-all-check-your-answers-catalogue" method="post">
 
-      <p>You confirm that:</p>
+      </div>
+    </div>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li>the person named in this report is your patient</li>
-        <li>this is a full report of their condition and treatment</li>
-      </ul>
-
-</div>
-</div>
-
-<div class="govuk-!-padding-bottom-4"></div>
-
-      <button class="govuk-button" data-module="govuk-button">I agree - send the report</button>
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
 
     </form>
 
