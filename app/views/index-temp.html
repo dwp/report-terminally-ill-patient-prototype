@@ -1,0 +1,98 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        DS1500 Prototype Versions</h1>
+
+        <h2 class="govuk-heading-m">Please find the DS1500 prototype versions currently under test and refinement.</h2>
+
+      <p> Also known as <b>Report a terminally ill patient</b>.</p>
+
+      <p> The Baseline Prototypes were initial developed leveraging the questions from the <a href="https://temp-ds1500.herokuapp.com/index">previous DS1500 Build</a>.</p>
+
+      <p> For any questions, please contact <a href="mailto:david.doherty@engineering.digital.dwp.gov.uk">David Doherty</a>.
+      </p>
+
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Prototype for Developers
+        </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <p>This section is for the Development Team. Please note that various elements of the Prototype will be <b>subject to change</b> as per User Testing. The Design Team will coordinate changes with the BA Team.</p>
+
+            <form class="form" action="1form-start-catalogue" method="post">
+              <div class="govuk-inset-text"><b>Catalogue Prototype</b> is designed for the Development Team.</b> Please develop the look and feel of the prototype and <b>do not replicate the code</b>.</div>
+              <button class="govuk-button" data-module="govuk-button">Catalogue Prototype</button></form>
+
+          </div>
+        </div>
+        <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Prototypes for Design Team for User Testing
+        </span>
+            </h2>
+          </div>
+
+          <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+
+            <p>This section is for the Design Team to test new features with users. This section is <b>not</b> for the Development Team. The Development Team should refer to <b>Prototype for Developers</b> section.</p>
+
+            <form class="form" action="start" method="post">
+              <div class="govuk-inset-text"> Prototype v1 is designed with <b>several questions per page</b></div>
+              <button class="govuk-button" data-module="govuk-button">Prototype v1</button></form>
+
+            <form class="form" action="1Q-start" method="post">
+              <div class="govuk-inset-text"> Prototype v2 is designed with <b>1 question per page</b></div>
+              <button class="govuk-button" data-module="govuk-button">Prototype v2</button></form>
+
+            <form class="form" action="1form-start" method="post">
+              <div class="govuk-inset-text"> Prototype v3 is designed with <b>all questions on one single page.</b> Please note that this prototype does not have <b>check your answers functionality</b> due to fear of duplication</div>
+              <button class="govuk-button" data-module="govuk-button">Prototype v3</button></form>
+
+            <form class="form" action="1form-start-v2" method="post">
+              <div class="govuk-inset-text"> Prototype v4 is designed with <b>all questions on one single page.</b> Since a <b>check your answers</b> functionality is not recommended to avoid duplication, Prototype v4 tests a <b>YES/NO Radio component</b> at the end of the form stating: <i>have you checked all the information you have entered for errors?</i></div>
+              <button class="govuk-button" data-module="govuk-button">Prototype v4</button></form>
+
+            <form class="form" action="1form-start-v5" method="post">
+              <div class="govuk-inset-text"> Prototype v5 is designed with <b>all questions on one single page.</b> Further user research has indicated that users may actually <b>want</b> a <b>check your answers</b> page as it is a chance to "preview" the application before its submitted. Therefore this prototype contains "check your answers" functionality</div>
+              <button class="govuk-button" data-module="govuk-button">Prototype v5</button></form>
+
+            <form class="form" action="1form-start-v6" method="post">
+              <div class="govuk-inset-text"> Prototype v6 experiments with some new minor designs and components to aid the flow of the service, with the aim of A/B Testing them.</div>
+              <button class="govuk-button" data-module="govuk-button">Prototype v6</button></form>
+
+            <form class="form" action="1form-start-v7" method="post">
+              <div class="govuk-inset-text"> Prototype v7 experiments with builds from a team workshop on Friday 8th Jan.</div>
+              <button class="govuk-button" data-module="govuk-button">Prototype v7</button></form>
+
+          </div>
+      </div>
+
+          </div>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          'Prototypes for Design Team for User Testing' are not for production!
+        </strong>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
