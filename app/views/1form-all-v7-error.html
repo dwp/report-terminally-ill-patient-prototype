@@ -199,13 +199,23 @@
               A representative of the patient
             </label>
           </div>
+
           <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
             <div class="govuk-form-group">
               <div class="govuk-!-padding-bottom-2"></div>
-              <h4 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-1">
+              <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset" aria-describedby="nationality-hint nationality-error">
+
+
+                <h4 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-1">
                 Representative details
               </label>
               </h4>
+                  <div class="govuk-!-padding-bottom-3"></div>
+
+                  <span id="nationality-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span>Please specify your relationship to the patient
+    </span>
               <div class="govuk-form-group">
                 <div class="govuk-!-padding-bottom-3"></div>
                 <h5 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="representative-name">
