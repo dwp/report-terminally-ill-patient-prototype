@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  403 error
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Sorry, there is a problem
+      </h1>
+
+      <p>Sorry, the service is unavailable.</p>
+      <p>We weren't able to authorise you to use this service at this time, please <a href="#">try again</a>.</p>
+      <p>This service can only be accessed if you have the authority to complete a DS1500 form on behalf of a patient. This is checked against the job role on your NHS smart card.</p>
+      <p>If you should have access to this service make sure that you have the correct job role on your smart card, for example a GP, specialist or nurse. Your IT support team can change this for you if it is wrong.</p>
+      <p>Please contact the NHS Service Desk at: <a href="https://nww.nhscfhservicedesk.nhs.uk">https://nww.nhscfhservicedesk.nhs.uk</a></p>
+      <p>If you do not already have an account to log incidents with the NHS Service Desk please ring the NHS National Service Desk on <b>0300 303 5035</b>.</p>
+      <p>If the problem persists and you need to complete a DS1500 you can complete form DS1500 and the fee form electronically and submit it to us by using the NHS mail system or from a <b>nhs.wales.uk</b> email address. No signature is required. We can provide you with an electronic PDF version of the DS1500 and DS1500 fee form.</p>
+      <p>Please provide the following information by e-mail from your current <b>NHS.net</b> or <b>nhs.wales.uk</b> email address:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your <b>NHS.net</b> or <b>nhs.wales.uk</b> e-mail address or addresses</li>
+        <li>your surgery/hospital/office postal address and telephone number</li>
+        <li>a list of medical professionals using the same <b>NHS.net</b> or <b>nhs.wales.uk</b> email</li>
+        <li>please advise if you require the DS1500 and DS1500 fee form, or the DS1500 only</li>
+        <li>send these details to: <a href="pip.e-ds1500@dwp.gov.uk">pip.e-ds1500@dwp.gov.uk</a></li>
+        <li>Do not encrypt any part of the email. Any email from a <b>non-NHS.net</b> or <b>nhs.wales.uk</b> account will be automatically deleted</li>
+        <li>If you do not have an <b>NHS.net</b> or <b>nhs.wales.uk</b> email address, contact your local IT helpdesk to request an account</li>
+      </ul>
+
+      <h2 class="govuk-heading-s">
+        Clerical return
+      </h2>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Give the DS1500 to the person who asked you to complete it and return the fee form separately to us or</li>
+        <li>Send the completed DS1500 form and fee form to us</li>
+        <li>When returning DS1500 forms, please ensure a separate envelope is used for each individual patient. Please do not staple documents together</li>
+      </ul>
+
+      {% endblock %}
