@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="1form-start-v7">Back</a>
+  <a class="govuk-back-link" href="1form-start-v8">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -13,33 +13,44 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">{% if serviceName %} {{ serviceName }} {% endif %}</h1>
+    <div class="govuk-grid-row-2">
+      <!DOCTYPE html>
+      <style>
+    .govuk-grid-row-2 {
+    background-color: #005ea5;
+    color: #fff;
+    margin-top: 1.25em;
+    margin-bottom: 2.25em;
+    padding: 20px 40px 2px;
+    }
 
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-warning-text__assistive">Warning</span>
-        This page can not be saved. If you leave this page before pressing submit, any entries you have made will be lost. <span style="color:#d4351c">If inactive and for security reasons, the page will time out after 20 minutes.</span>
-      </strong>
-    </div>
+    </style>
+      <h1 class="govuk-heading-xl" style="color:white">
+        Report a terminally ill patient (DS1500)
+      </h1>
 
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text" style="color:#d4351c">
-        <span class="govuk-warning-text__assistive" style="color:#d4351c">Warning</span>
-        This page can not be saved. If you leave this page before pressing submit, any entries you have made will be lost. If inactive and for security reasons, the page will time out after 20 minutes.
-      </strong>
+      <div class="govuk-warning-text" style="color:white">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text" style="color:white">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          This page can not be saved. If you leave this page before pressing submit, any entries you have made will be lost. If inactive and for security reasons, the page will time out after 20 minutes.
+        </strong>
+      </div>
+
+      </form>
+      </html>
+
     </div>
 
     <h2 class="govuk-heading-l">Patient details</h2>
 
     <div class="govuk-!-padding-bottom-2"></div>
 
-    <form class="form" action="1form-all-check-your-answers-v7" method="post">
+    <form class="form" action="1form-all-check-your-answers-v8" method="post">
 
       <div class="govuk-form-group">
-<h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
-  Full Name
+<h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="full-name">
+  Full name
   </label>
 </h3>
 <div class="govuk-form-group">
@@ -115,7 +126,7 @@
 
         <div class="govuk-form-group">
           <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
-            Include details of the patient’s main diagnosis, and any others that are relevant
+            Include details of the patient’s main diagnosis
             </label>
           </h3>
           <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
@@ -391,16 +402,35 @@ Your Trust
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="1form-all-check-your-answers-v7" method="post">
+    <form class="form" action="1form-all-check-your-answers-v8" method="post">
 
 </div>
 </div>
 
       <button class="govuk-button" data-module="govuk-button">Continue</button>
 
-    </form>
+  </div>
 
   </div>
 </div>
+    </form>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <div class="govuk-inset-text">
+      <h2 class="govuk-heading-m">Talk to an advisor</h2>
+      <ul class="govuk-list">
+        <li>Telephone: 0300 303 5035</li>
+        <li>Monday to Sunday, 24/7</li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
 
 {% endblock %}
