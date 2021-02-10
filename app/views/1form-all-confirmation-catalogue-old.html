@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Confirmation page
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Report complete
+          </h1>
+          <div class="govuk-panel__body">
+            Transaction ID: xxxxxxxxxxxxxxxxxxxxxxxxx
+          </div>
+        </div>
+
+        <div class="govuk-!-padding-bottom-2"></div>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            This is your only chance to download these documents, so do it now.
+          </strong>
+        </div>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <!DOCTYPE html>
+            <style>
+                              .ds1500-form {max-width: 80%}
+                              .ds1500-form {max-height: auto%}
+        </style>
+            <center>
+              <img src="/public/images/ds1500-form.png" class="ds1500-form" alt="An example of a DS1500 form">
+            </center>
+            </html>
+          </div>
+          <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-!-padding-bottom-4"></div>
+            <h2 class="govuk-heading-s">DS1500</h2>
+            <p>Download a copy of this DS1500 for your own records</p>
+          </div>
+
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style = "left: 14px">
+            <b>Download DS1500</b>
+          </button>
+        </div>
+
+        <div class="govuk-!-padding-bottom-4"></div>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <!DOCTYPE html>
+            <style>
+                              .fee-form {max-width: 80%}
+                              .fee-form {max-height: auto}
+        </style>
+            <center>
+              <img src="/public/images/fee-form.png" class="fee-form" alt="An example of a fee claim form">
+            </center>
+            </html>
+          </div>
+          <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-!-padding-bottom-4"></div>
+            <h2 class="govuk-heading-s">DS1500 Fee Form</h2>
+            <p>Download the form for you to claim the fee of filling in this DS1500</p>
+          </div>
+
+          <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style = "left: 14px">
+            <b>Download Fee Form</b>
+          </button>
+        </div>
+          </div>
+        </div>
+
+    <div class="govuk-!-padding-bottom-4"></div>
+
+        <p class="govuk-body">
+          <a href="1form-all-start-catalogue" class="govuk-link">Report another terminally ill patient</a>
+        </p>
+
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

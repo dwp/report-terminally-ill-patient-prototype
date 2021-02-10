@@ -33,8 +33,7 @@
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text" style="color:white">
           <span class="govuk-warning-text__assistive">Warning</span>
-          This page can not be saved. If you leave this page before pressing submit, any entries you have made will be lost. If inactive and for security reasons, the page will time out after 20 minutes.
-        </strong>
+          This page can not be saved. If you leave this page before pressing continue, any entires you have made will be lost. If the page is left inactive for 20 minutes, it will time out.        </strong>
       </div>
 
       </form>
@@ -128,9 +127,35 @@
           <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
             Include details of the patient’s main diagnosis
             </label>
+            <div id="more-detail-hint" class="govuk-hint">
+              For example: lung disease, heart disease, cancer
+            </div>
           </h3>
           <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
         </div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Need assistance with diagnosis?
+    </span>
+      </summary>
+      <div class="govuk-!-padding-bottom-5"></div>
+      <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail-1">
+        Please fill out the diagnosis box using terminology you normally would within your profession
+      </label>
+      </h3>
+      <div class="govuk-details__text">
+        <p><b>Example 1</b></p>
+        <div class="govuk-!-padding-bottom-0"></div>
+        [add example 1]
+      </div>
+      <div class="govuk-details__text">
+        <p><b>Example 2</b></p>
+        <div class="govuk-!-padding-bottom-0"></div>
+        [add example 2]
+      </div>
+    </details>
 
         <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" role="group" aria-describedby="dod-hint">
@@ -168,6 +193,29 @@
       </h3>
       <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
     </div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Need assistance with other relevant diagnosis?
+    </span>
+      </summary>
+      <div class="govuk-!-padding-bottom-5"></div>
+      <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail-1">
+        The other relevant diagnosis box looks for additional that... [more info needed]
+      </label>
+      </h3>
+      <div class="govuk-details__text">
+        <p><b>Example 1</b></p>
+        <div class="govuk-!-padding-bottom-0"></div>
+        [add example 1]
+      </div>
+      <div class="govuk-details__text">
+        <p><b>Example 2</b></p>
+        <div class="govuk-!-padding-bottom-0"></div>
+        [add example 2]
+      </div>
+    </details>
 
     <div class="govuk-!-padding-bottom-3"></div>
 
@@ -260,13 +308,36 @@
 
 <div class="govuk-form-group">
   <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-1">
-      Give details of the clinical features that indicate a severe progressive condition.
+      Give details of the clinical features that indicate a severe progressive condition
     </label>
   </h3>
   <div id="more-detail-hint" class="govuk-hint">
-    For example: lung disease, heart failure, terminal cancer.</div>
+    For example: symptoms or signs on the patient</div>
   <textarea class="govuk-textarea" id="more-detail-1" name="more-detail-1" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Need assistance with clinical features?
+    </span>
+      </summary>
+      <div class="govuk-!-padding-bottom-5"></div>
+      <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail-1">
+        Please fill out the clinical features box using terminology you normally would within your profession
+      </label>
+      </h3>
+      <div class="govuk-details__text">
+        <p><b>Example 1</b></p>
+        <div class="govuk-!-padding-bottom-0"></div>
+        [add example 1]
+      </div>
+      <div class="govuk-details__text">
+        <p><b>Example 2</b></p>
+        <div class="govuk-!-padding-bottom-0"></div>
+        [add example 2]
+      </div>
+    </details>
 
 </div>
 
@@ -290,6 +361,29 @@
 <p>If there are any interventions or treatments planned which could significantly change the progression of the patient's condition, give details.</p>
   <textarea class="govuk-textarea" id="more-detail-3" name="more-detail-3" rows="5" aria-describedby="more-detail-hint-3"></textarea>
 </div>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Need assistance with treatment details?
+    </span>
+        </summary>
+        <div class="govuk-!-padding-bottom-5"></div>
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail-1">
+          The treatment details boxes looks for ... [more info needed]
+        </label>
+        </h3>
+        <div class="govuk-details__text">
+          <p><b>Example 1: Including the dates and the patient's response to the treatment</b></p>
+          <div class="govuk-!-padding-bottom-0"></div>
+          [add example 1]
+        </div>
+        <div class="govuk-details__text">
+          <p><b>Example 2: If there are any interventions or treatments planned which could significantly change the progression of the patient's condition, give details</b></p>
+          <div class="govuk-!-padding-bottom-0"></div>
+          [add example 2]
+        </div>
+      </details>
 
 <div class="govuk-!-padding-bottom-4"></div>
 
