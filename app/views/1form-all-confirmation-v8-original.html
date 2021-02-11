@@ -4,21 +4,9 @@
   Confirmation page
 {% endblock %}
 
-{% block beforeContent %}
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Feedback
-    </strong>
-    <span class="govuk-phase-banner__text">
-      Please provide feedback on your experience – your <a class="govuk-link" href="#">feedback</a> will help us improve the service.
-    </span>
-  </p>
-</div>
-{% endblock %}
-
 {% block content %}
 
+<div class="govuk-width-container">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <div class="govuk-panel govuk-panel--confirmation">
@@ -32,6 +20,8 @@
 
         <div class="govuk-!-padding-bottom-5"></div>
 
+        <h2 class="govuk-heading-l">Download your documents</h2>
+
         <div class="govuk-warning-text">
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
           <strong class="govuk-warning-text__text">
@@ -39,10 +29,6 @@
             This is your only chance to download these documents, so do it now. This page can not be saved. If you leave this page, you will not be able to download your documents. If the page is left inactive for 20 minutes, it will time out.
           </strong>
         </div>
-
-        <h2 class="govuk-heading-l">Download your documents</h2>
-        <div class="govuk-!-padding-bottom-2"></div>
-
 
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-one-third">
@@ -70,21 +56,10 @@
 
         <div class="govuk-!-padding-bottom-4"></div>
 
+        <h2 class="govuk-heading-m">Claiming a fee</h2>
 
-        <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Store the DS1500 securely
-    </span>
-          </summary>
-          <div class="govuk-details__text">
-            <h2 class="govuk-heading-m">Claiming a fee</h2>
-
-            <p>You can claim a fee if you are a GP or GMC registered consultant, but only if you have authorised this form by signing it at the end.</p>
-            <p>To claim your fee, fill out the remaining sections of the pre-populated fee claim form which can be downloaded through the above <b>DS1500 fee claim form</b> button.</p>          </div>
-        </details>
-
-        <hr class="govuk-section-break govuk-section-break--visible">
+        <p>You can claim a fee if you are a GP or GMC registered consultant, but only if you have authorised this form by signing it at the end.</p>
+        <p>To claim your fee, fill out the remaining sections of the pre-populated fee claim form which can be downloaded through the above <b>DS1500 fee claim form</b> button.</p>
 
         <div class="govuk-!-padding-bottom-4"></div>
 
@@ -110,7 +85,6 @@
             <b>Download fee claim form</b>
           </button>
         </div>
-
           </div>
       <div class="govuk-grid-column-one-third">
 
@@ -121,37 +95,31 @@
             <li>Monday to Sunday, 24/7</li>
             <div class="govuk-!-padding-bottom-2"></div>
             <li><a href="1form-all-start-v8" class="govuk-link">Send another DS1500</a></li>
+            <li><a href="#" class="govuk-link">Provide feedback on this service</a></li>
           </ul>
         </div>
+
       </div>
         </div>
 
-    <div class="govuk-!-padding-bottom-4"></div>
+    <div class="govuk-!-padding-bottom-7"></div>
 
-<details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      How to claim your fee
-    </span>
-  </summary>
-  <div class="govuk-details__text">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-!-padding-bottom-2"></div>
 
-        <h2 class="govuk-heading-m">Claiming a fee</h2>
+    <h2 class="govuk-heading-m">Claiming a fee</h2>
 
-        <p>You can claim a fee if you are a GP or GMC registered consultant, but only if you have authorised this form by signing it at the end.</p>
+    <p>You can claim a fee if you are a GP or GMC registered consultant, but only if you have authorised this form by signing it at the end.</p>
         <p>To claim your fee, fill out the remaining sections of the pre-populated fee claim form which can be downloaded through the above <b>DS1500 fee claim form</b> button.</p>
-        <p>We will pay your fee into your bank or building society account.</p>
-        <div class="govuk-inset-text">
-          MacMillan nurses, Nurse Specialists and practice nurses can complete the DS1500, but only GPs and GMC registered consultants may claim a fee.</div>
-        <p><b>For claims to Employment and Support Allowance or Universal Credit</b></p>
+    <p>We will pay your fee into your bank or building society account.</p>
+    <div class="govuk-inset-text">
+      MacMillan nurses, Nurse Specialists and practice nurses can complete the DS1500, but only GPs and GMC registered consultants may claim a fee.</div>
+    <p><b>For claims to Employment and Support Allowance or Universal Credit</b></p>
         <p>Send your fee form electronically by submitting it to us by using the NHS mail system.</p>
-        <p><b>For claims to Personal Independence Payment, Disability Living Allowance or Attendance Allowance</b></p>
+    <p><b>For claims to Personal Independence Payment, Disability Living Allowance or Attendance Allowance</b></p>
         <p>Please send it to a relevant address:</p>
-        <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
+    <details class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       Relevant addresses
     </span>
@@ -246,8 +214,7 @@
                 </div>
               </div>
             </div>
-        </details>  </div>
-</details>
+          </details>
 
   </div>
 
@@ -256,6 +223,7 @@
 
 </div>
 
+</div>
 
 
 {% endblock %}

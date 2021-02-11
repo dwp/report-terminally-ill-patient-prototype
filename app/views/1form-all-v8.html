@@ -42,6 +42,8 @@
     </div>
 
     <h2 class="govuk-heading-l">Patient details</h2>
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <div class="govuk-!-padding-bottom-4"></div>
 
     <div class="govuk-!-padding-bottom-2"></div>
 
@@ -122,6 +124,8 @@
     <div class="govuk-!-padding-bottom-7"></div>
 
       <h2 class="govuk-heading-l">Diagnosis</h2>
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <div class="govuk-!-padding-bottom-6"></div>
 
         <div class="govuk-form-group">
           <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
@@ -226,6 +230,9 @@
             Is the patient aware of their prognosis?
           </h3>
         </legend>
+        <div id="more-detail-hint" class="govuk-hint">
+          This will support any communication we have with the patient
+        </div>
         <div class="govuk-radios govuk-radios--inline">
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="prognosis" name="prognosis" type="radio" value="yes">
@@ -305,6 +312,8 @@
 <div class="govuk-!-padding-bottom-6"></div>
 
     <h2 class="govuk-heading-l">Clinical features</h2>
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <div class="govuk-!-padding-bottom-6"></div>
 
 <div class="govuk-form-group">
   <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-1">
@@ -346,6 +355,8 @@
 <div class="govuk-!-padding-bottom-1"></div>
 
     <h2 class="govuk-heading-l">Treatment</h2>
+      <hr class="govuk-section-break govuk-section-break--visible">
+      <div class="govuk-!-padding-bottom-6"></div>
 
     <div class="govuk-form-group">
   <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-2">
@@ -388,6 +399,8 @@
 <div class="govuk-!-padding-bottom-4"></div>
 
 <h2 class="govuk-heading-l">Your details</h2>
+      <hr class="govuk-section-break govuk-section-break--visible">
+      <div class="govuk-!-padding-bottom-6"></div>
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -436,7 +449,7 @@
                 <label class="govuk-label" for="contact-by-text">
                   Please specify
                 </label>
-                <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="text" spellcheck="false"></div>
+                <input class="govuk-input govuk-!-width-two-thirds" id="contact-by-text" name="contact-by-text" type="text" spellcheck="false"></div>
 
             </div>
           </div>
@@ -461,6 +474,8 @@
 Your Trust
 </label>
 </h3>
+    <div id="your-trust-hint" class="govuk-hint">
+      If you are not a part of a Trust, this could be your Clinical Commissioning Group (CCG).</div>
 <div class="govuk-form-group">
   <input class="govuk-input" id="your-trust" name="your-trust" type="text" spellcheck="false" autocomplete="name">
 
