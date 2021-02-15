@@ -33,7 +33,7 @@
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text" style="color:white">
           <span class="govuk-warning-text__assistive">Warning</span>
-          This page can not be saved. If you leave this page before pressing continue, any entires you have made will be lost. If the page is left inactive for 20 minutes, it will time out.        </strong>
+          This page can not be saved. If you leave this page before pressing continue, any entries you have made will be lost. If the page is left inactive for 30 minutes, it will time out.        </strong>
       </div>
 
       </form>
@@ -307,7 +307,6 @@
 
       </fieldset>
     </div>
-</div>
 
 <div class="govuk-!-padding-bottom-6"></div>
 
@@ -475,9 +474,9 @@ Your Trust
 </label>
 </h3>
     <div id="your-trust-hint" class="govuk-hint">
-      If you are not a part of a Trust, this could be your Clinical Commissioning Group (CCG).</div>
-<div class="govuk-form-group">
-  <input class="govuk-input" id="your-trust" name="your-trust" type="text" spellcheck="false" autocomplete="name">
+      If you are not a part of a Trust, this could be your Clinical Commissioning Group (CCG), Primary Care Trust (PCT) or surgery.<div class="govuk-form-group">
+      <div class="govuk-!-padding-bottom-3"></div>
+      <input class="govuk-input" id="your-trust" name="your-trust" type="text" spellcheck="false" autocomplete="name">
 
 <div class="govuk-!-padding-bottom-1"></div>
 
@@ -524,14 +523,25 @@ Your Trust
 </div>
     </form>
   </div>
+</div>
+</div>
 
   <div class="govuk-grid-column-one-third">
 
     <div class="govuk-inset-text">
+      <!DOCTYPE html>
+      <style>
+                              .nhs {max-width: 40%}
+                              .nhs {max-height: auto%}
+        </style>
+      <img src="/public/images/nhs.png" class="nhs" alt="NHS logo">
+      </html>
+      <div class="govuk-!-padding-bottom-3"></div>
       <h2 class="govuk-heading-m">Talk to an advisor</h2>
       <ul class="govuk-list">
         <li>Telephone: 0300 303 5035</li>
-        <li>Monday to Sunday, 24/7</li>
+        <li><a href="ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+        <li>24-hour service</li>
       </ul>
     </div>
 
