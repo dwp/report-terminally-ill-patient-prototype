@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Timeout error
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Your session has ended due to inactivity
+      </h1>
+
+      <p>Your session automatically ends if you don't use the service for 30 minutes.</p>
+      <p>We do this for your security. The information that you entered has not been saved.</p>
+      <p>Return to the <a href="index">start page</a>.</p>
+
+
+{% endblock %}
