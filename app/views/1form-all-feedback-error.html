@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Feedback
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="1form-all-confirmation-sprint10">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-error-summary" aria-labelledby="satisfaction-rating-hint changed-name-error" role="alert" tabindex="-1" data-module="govuk-error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#passport-issued-error">Select a satisfaction rating</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-xl">Give feedback</h1>
+
+        <div class="govuk-form-group">
+          <div class="govuk-form-group govuk-form-group--error">
+            <fieldset class="govuk-fieldset" aria-describedby="satisfaction-rating-hint changed-name-error">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h2 class="govuk-fieldset__heading">
+                Overall, how did you feel about the service you received today?
+              </h2>
+            </legend>
+
+            <span id="changed-name-error" class="govuk-error-message">
+             <span class="govuk-visually-hidden">Error:</span> Select a satisfaction rating
+            </span>
+
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="feedback" name="feedback" type="radio" value="very-satisfied">
+                <label class="govuk-label govuk-radios__label" for="feedback">
+                  Very satisfied
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="feedback-2" name="feedback" type="radio" value="satisfied">
+                <label class="govuk-label govuk-radios__label" for="feedback-2">
+                  Satisfied
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="feedback-3" name="feedback" type="radio" value="neither-satisfied-or-dissatisfied">
+                <label class="govuk-label govuk-radios__label" for="feedback-3">
+                  Neither satisfied or dissatisfied
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="feedback-4" name="feedback" type="radio" value="dissatisfied">
+                <label class="govuk-label govuk-radios__label" for="feedback-4">
+                  Dissatisfied
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="feedback-5" name="feedback" type="radio" value="very-dissatisfied">
+                <label class="govuk-label govuk-radios__label" for="feedback-5">
+                  Very dissatisfied
+                </label>
+              </div>
+          </fieldset>
+          </div>
+
+              <div class="govuk-!-padding-bottom-5"></div>
+
+              <div class="govuk-form-group">
+                <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+                  Can you provide more detail?
+                </label>
+                </h2>
+                <div id="more-detail-hint" class="govuk-hint">
+                  Do not include personal or financial information, like your National Insurance number or credit card details.
+                </div>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+              </div>
+
+              <button class="govuk-button" data-module="govuk-button">
+                Send feedback
+              </button>
+
+            </div>
+
+          </fieldset>
+        </div>
+
+
+
+
+      <div class="govuk-grid-column-one-third">
+
+        <div class="govuk-inset-text">
+          <h2 class="govuk-heading-m">Talk to an advisor</h2>
+          <ul class="govuk-list">
+            <li>Telephone: 0300 303 5035</li>
+            <li><a href="ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+            <li>24-hour service</li>
+          </ul>
+        </div>
+          </ul>
+        </div>
+
+      </div>
+
+  </div>
+
+</div>
+
+
+</div>
+
+
+
+{% endblock %}
