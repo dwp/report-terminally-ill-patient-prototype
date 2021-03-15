@@ -5,7 +5,7 @@ Details - Report a terminally ill patient (DS1500) - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="1form-start-catalogue">Back</a>
+  <a class="govuk-back-link" href="1form-start-v9">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -26,13 +26,13 @@ Details - Report a terminally ill patient (DS1500) - GOV.UK
           This page can not be saved. If you leave this page before pressing continue, any entries you have made will be lost. If the page is left inactive for 30 minutes, it will time out.        </strong>
       </div>
 
+
     </div>
 
     <h2 class="govuk-heading-l">Patient details</h2>
+    <div class="govuk-!-padding-bottom-1"></div>
 
-    <div class="govuk-!-padding-bottom-2"></div>
-
-    <form class="form" action="1form-all-check-your-answers-catalogue" method="post">
+    <form class="form" action="1form-all-check-your-answers-v9" method="post">
 
       <div class="govuk-form-group">
 <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="full-name">
@@ -101,7 +101,7 @@ Details - Report a terminally ill patient (DS1500) - GOV.UK
       </label>
       </h3>
       <div id="national-insurance-number-hint" class="govuk-hint">
-        It will be on your patients National Insurance card, benefit letter, payslip or P60. For example 'QQ 12 34 56 C'. This form is processed quicker if you have it.
+        For example, 'QQ 12 34 56 C'. This form is processed quicker if you have it.
       </div>
       <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
     </div>
@@ -109,19 +109,28 @@ Details - Report a terminally ill patient (DS1500) - GOV.UK
     <div class="govuk-!-padding-bottom-7"></div>
 
       <h2 class="govuk-heading-l">Diagnosis</h2>
+    <div class="govuk-!-padding-bottom-1"></div>
 
-        <div class="govuk-form-group">
-          <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
-            Include details of the patient’s main diagnosis
-            </label>
-            <div id="more-detail-hint" class="govuk-hint">
-              For example: lung disease, heart disease, cancer
-            </div>
-          </h3>
-          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="126">
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-hint">
+          Include details of the patient’s main diagnosis
+        </label>
+        </h3>
+        <div id="more-detail-hint-hint" class="govuk-hint">
+          For example: lung disease, heart disease, cancer
         </div>
+        <textarea class="govuk-textarea govuk-js-character-count" id="more-detail-hint" name="more-detail-hint" rows="5" aria-describedby="more-detail-hint-info more-detail-hint-hint"></textarea>
+      </div>
+
+      <div id="more-detail-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 126 characters
+      </div>
+
+    </div>
 
     <div class="govuk-!-padding-bottom-2"></div>
+
         <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" role="group" aria-describedby="dod-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -130,7 +139,7 @@ Details - Report a terminally ill patient (DS1500) - GOV.UK
       </h3>
     </legend>
     <div id="dod-hint" class="govuk-hint">
-      For example, 3 2020. If the exact date is unknown, please enter an estimated date that is as accurate as possible.
+      For example, 3 2020. If the exact date is unknown, enter an estimated date that is as accurate as possible.
     </div>
     <div class="govuk-date-input" id="dod">
       <div class="govuk-date-input__item">
@@ -151,13 +160,21 @@ Details - Report a terminally ill patient (DS1500) - GOV.UK
 
     <div class="govuk-!-padding-bottom-7"></div>
 
-    <div class="govuk-form-group">
-      <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
-        Other relevant diagnoses? (optional)
-      </label>
-      </h3>
-      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="132">
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-hint">
+          Other relevant diagnoses?
+        </label>
+        </h3>
+        <textarea class="govuk-textarea govuk-js-character-count" id="more-detail-hint" name="more-detail-hint" rows="5" aria-describedby="more-detail-hint-info more-detail-hint-hint"></textarea>
+      </div>
+
+      <div id="more-detail-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 132 characters
+      </div>
+
     </div>
+
 
     <div class="govuk-!-padding-bottom-3"></div>
 
@@ -169,7 +186,7 @@ Details - Report a terminally ill patient (DS1500) - GOV.UK
           </h3>
         </legend>
         <div id="more-detail-hint" class="govuk-hint">
-          This will support any communication we have with the patient
+          This will support any communication we have with the patient.
         </div>
         <div class="govuk-radios govuk-radios--inline">
           <div class="govuk-radios__item">
@@ -229,15 +246,15 @@ Details - Report a terminally ill patient (DS1500) - GOV.UK
               </div>
               <div class="govuk-!-padding-bottom-1"></div>
               <div class="govuk-form-group">
-                <h5 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="patient-address">
+                <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="patient-address">
                   Address
                 </label>
-                </h5>
+                </h3>
                 <textarea class="govuk-textarea" id="patient-address" name="patient-address" rows="5" aria-describedby="patient-address-hint"></textarea>
               </div>
 
               <div class="govuk-form-group">
-                <h5 class="govuk-heading-s">Postcode</h5>
+                <h3 class="govuk-heading-s">Postcode</h3>
                 <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
 
             </div>
@@ -245,21 +262,29 @@ Details - Report a terminally ill patient (DS1500) - GOV.UK
 
       </fieldset>
     </div>
-</div>
 
 <div class="govuk-!-padding-bottom-6"></div>
 
     <h2 class="govuk-heading-l">Clinical features</h2>
+    <div class="govuk-!-padding-bottom-1"></div>
 
-<div class="govuk-form-group">
-  <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-1">
-      Give details of the clinical features that indicate a severe progressive condition
-    </label>
-  </h3>
-  <div id="more-detail-hint" class="govuk-hint">
-    For example: symptoms or signs on the patient</div>
-  <textarea class="govuk-textarea" id="more-detail-1" name="more-detail-1" rows="5" aria-describedby="more-detail-hint"></textarea>
-</div>
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="236">
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-hint">
+          Give details of the clinical features that indicate a severe progressive condition
+        </label>
+        </h3>
+        <div id="more-detail-hint-hint" class="govuk-hint">
+          For example: symptoms or signs on the patient
+        </div>
+        <textarea class="govuk-textarea govuk-js-character-count" id="more-detail-hint" name="more-detail-hint" rows="5" aria-describedby="more-detail-hint-info more-detail-hint-hint"></textarea>
+      </div>
+
+      <div id="more-detail-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 236 characters
+      </div>
+
+    </div>
 
 
 </div>
@@ -269,26 +294,48 @@ Details - Report a terminally ill patient (DS1500) - GOV.UK
 <div class="govuk-!-padding-bottom-1"></div>
 
     <h2 class="govuk-heading-l">Treatment</h2>
+      <div class="govuk-!-padding-bottom-1"></div>
 
-    <div class="govuk-form-group">
-  <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-2">
-    Give details of treatments
-    </label>
-  </h3>
-      <div id="more-detail-hint" class="govuk-hint">
-        Including the dates and the patient's response to the treatment.</div>
-  <textarea class="govuk-textarea" id="more-detail-2" name="more-detail-2" rows="5" aria-describedby="more-detail-hint-2"></textarea>
-</div>
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="160">
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="with-hint">
+              Give details of treatments
+            </label>
+            </h1>
+            <div id="with-hint-hint" class="govuk-hint">
+              Including the dates and the patient's response to the treatment.
+            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
 
-<div class="govuk-form-group">
-<p>If there are any interventions or treatments planned which could significantly change the progression of the patient's condition, give details.</p>
-  <textarea class="govuk-textarea" id="more-detail-3" name="more-detail-3" rows="5" aria-describedby="more-detail-hint-3"></textarea>
-</div>
+          <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+            You can enter up to 160 characters
+          </div>
+
+        </div>
 
 
-<div class="govuk-!-padding-bottom-4"></div>
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="120">
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="with-hint">
+              <p>If there are any interventions or treatments planned which could significantly change the progression of the patient's condition, give details.</p>
+            </label>
+            </h1>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
+
+          <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+            You can enter up to 120 characters
+          </div>
+
+        </div>
+
+
+
+<div class="govuk-!-padding-bottom-6"></div>
 
 <h2 class="govuk-heading-l">Your details</h2>
+      <div class="govuk-!-padding-bottom-1"></div>
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -362,8 +409,10 @@ Details - Report a terminally ill patient (DS1500) - GOV.UK
 Your trust
 </label>
 </h3>
-<div class="govuk-form-group">
-  <input class="govuk-input" id="your-trust" name="your-trust" type="text" spellcheck="false" autocomplete="name">
+    <div id="your-trust-hint" class="govuk-hint">
+      If you are not a part of a trust, this could be your Clinical Commissioning Group (CCG), Primary Care Trust (PCT) or surgery.<div class="govuk-form-group">
+      <div class="govuk-!-padding-bottom-3"></div>
+      <input class="govuk-input" id="your-trust" name="your-trust" type="text" spellcheck="false" autocomplete="name">
 
 <div class="govuk-!-padding-bottom-1"></div>
 
@@ -393,7 +442,7 @@ Your trust
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-    <form class="form" action="1form-all-check-your-answers-catalogue" method="post">
+    <form class="form" action="1form-all-check-your-answers-v9" method="post">
 
 </div>
 </div>
@@ -406,6 +455,8 @@ Your trust
 </div>
     </form>
   </div>
+</div>
+</div>
 
   <div class="govuk-grid-column-one-third">
 
