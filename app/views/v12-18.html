@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Details - Report a terminally ill patient (DS1500) - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v12-17">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <h2 class="govuk-heading-l">What is your phone number?</h2>
+    <div class="govuk-!-padding-bottom-1"></div>
+
+      <div class="govuk-form-group">
+
+        <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel"></div>
+        <div class="govuk-!-padding-bottom-1"></div>
+
+        <form class="form" action="v12-19" method="post">
+
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+
+
+    </div>
+
+
+
+          <div class="govuk-grid-column-one-third">
+
+            <div class="govuk-inset-text">
+              <h2 class="govuk-heading-m">Talk to an advisor</h2>
+
+              <div class="govuk-!-padding-bottom-1"></div>
+
+              <h3 class="govuk-heading-s">Telephone</h3>
+
+              <ul class="govuk-list">
+                <li>0300 303 5035</li>
+                <li>24-hour service</li>
+              </ul>
+
+              <h3 class="govuk-heading-s">Email</h3>
+
+              <ul class="govuk-list">
+                <li><a href="ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                <li>24-hour service</li>
+              </ul>
+            </div>
+          </div>
+
+{% endblock %}

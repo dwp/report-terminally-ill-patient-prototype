@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Details - Report a terminally ill patient (DS1500) - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v12-6">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-grid-row-2">
+
+    </div>
+
+      <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="dod-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h3 class="govuk-fieldset__heading">
+                      What is the patient's date of diagnosis?
+                  </h3>
+              </legend>
+              <div id="dod-hint" class="govuk-hint">
+                  For example, 3 2020. If the exact date is unknown, enter an estimated date that is as accurate as possible.
+              </div>
+              <div class="govuk-date-input" id="dod">
+                  <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="dod-month">
+                              Month
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dod-month" name="dod-month" type="text" autocomplete="diagnosis-month" pattern="[0-9]*" inputmode="numeric"></div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="dod-year">
+                              Year
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dod-year" name="dod-year" type="text" autocomplete="diagnosis-year" pattern="[0-9]*" inputmode="numeric"></div>
+                  </div>
+              </div>
+
+        <div class="govuk-!-padding-bottom-6"></div>
+
+        <form class="form" action="v12-8" method="post">
+
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+
+      </div>
+
+    </div>
+
+
+
+          <div class="govuk-grid-column-one-third">
+
+            <div class="govuk-inset-text">
+              <h2 class="govuk-heading-m">Talk to an advisor</h2>
+
+              <div class="govuk-!-padding-bottom-1"></div>
+
+              <h3 class="govuk-heading-s">Telephone</h3>
+
+              <ul class="govuk-list">
+                <li>0300 303 5035</li>
+                <li>24-hour service</li>
+              </ul>
+
+              <h3 class="govuk-heading-s">Email</h3>
+
+              <ul class="govuk-list">
+                <li><a href="ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                <li>24-hour service</li>
+              </ul>
+            </div>
+          </div>
+
+{% endblock %}

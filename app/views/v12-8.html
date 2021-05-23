@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Details - Report a terminally ill patient (DS1500) - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v12-7">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-grid-row-2">
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="132">
+            <div class="govuk-form-group">
+                <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail-hint">
+                    Does the patient have other relevant diagnoses?
+                </label>
+                </h3>
+                <textarea class="govuk-textarea govuk-js-character-count" id="more-detail-hint" name="more-detail-hint" rows="5" aria-describedby="more-detail-hint-info more-detail-hint-hint"></textarea>
+            </div>
+
+            <div id="more-detail-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                You can enter up to 132 characters
+            </div>
+
+        </div>
+
+    </div>
+
+      <div class="govuk-form-group">
+
+        <div class="govuk-!-padding-bottom-2"></div>
+
+        <form class="form" action="v12-9" method="post">
+
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+
+      </div>
+
+    </div>
+
+
+
+          <div class="govuk-grid-column-one-third">
+
+            <div class="govuk-inset-text">
+              <h2 class="govuk-heading-m">Talk to an advisor</h2>
+
+              <div class="govuk-!-padding-bottom-1"></div>
+
+              <h3 class="govuk-heading-s">Telephone</h3>
+
+              <ul class="govuk-list">
+                <li>0300 303 5035</li>
+                <li>24-hour service</li>
+              </ul>
+
+              <h3 class="govuk-heading-s">Email</h3>
+
+              <ul class="govuk-list">
+                <li><a href="ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                <li>24-hour service</li>
+              </ul>
+            </div>
+          </div>
+
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Details - Report a terminally ill patient (DS1500) - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="v12-8">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-grid-row-2">
+
+      <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h3 class="govuk-fieldset__heading">
+                      Is the patient aware of their prognosis?
+                  </h3>
+              </legend>
+              <div id="more-detail-hint" class="govuk-hint">
+                  This will support any communication we have with the patient.
+              </div>
+              <div class="govuk-radios govuk-radios--inline">
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="prognosis" name="prognosis" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="prognosis">
+                          Yes
+                      </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="prognosis-2" name="prognosis" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="prognosis">
+                          No
+                      </label>
+                  </div>
+              </div>
+
+          </fieldset>
+
+        <div class="govuk-!-padding-bottom-4"></div>
+
+        <form class="form" action="v12-10" method="post">
+
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+          <div class="govuk-grid-column-one-third">
+
+            <div class="govuk-inset-text">
+              <h2 class="govuk-heading-m">Talk to an advisor</h2>
+
+              <div class="govuk-!-padding-bottom-1"></div>
+
+              <h3 class="govuk-heading-s">Telephone</h3>
+
+              <ul class="govuk-list">
+                <li>0300 303 5035</li>
+                <li>24-hour service</li>
+              </ul>
+
+              <h3 class="govuk-heading-s">Email</h3>
+
+              <ul class="govuk-list">
+                <li><a href="ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                <li>24-hour service</li>
+              </ul>
+            </div>
+          </div>
+
+{% endblock %}
