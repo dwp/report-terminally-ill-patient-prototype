@@ -374,7 +374,12 @@ Details - Report a terminally ill patient (DS1500) - GOV.UK
                   Your GMC number
                 </label>
                 <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="text" spellcheck="false"></div>
-
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="Other" data-aria-controls="conditional-contact-4">
+              <label class="govuk-label govuk-radios__label" for="contact-4">
+                Specialist Nurse
+              </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="Other" data-aria-controls="conditional-contact-4">
@@ -413,7 +418,7 @@ Your Trust
 </label>
 </h3>
     <div id="your-trust-hint" class="govuk-hint">
-      If you are not a part of a Trust, this could be your Clinical Commissioning Group (CCG), Primary Care Trust (PCT) or surgery.<div class="govuk-form-group">
+      If you are not a part of a Trust, this could be your Clinical Commissioning Group (CCG) or surgery.<div class="govuk-form-group">
       <div class="govuk-!-padding-bottom-3"></div>
       <input class="govuk-input" id="your-trust" name="your-trust" type="text" spellcheck="false" autocomplete="name">
 
