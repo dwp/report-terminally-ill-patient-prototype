@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Report a terminally ill patient (DS1500) - GOV.UK
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-grid-row-2">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What is the patient's date of birth?
+              </h1>
+            </legend>
+            <div id="passport-issued-hint" class="govuk-hint">
+              For example, 27 3 2007
+            </div>
+            <div class="govuk-date-input" id="passport-issued">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        
+        <form class="form" action="el1-6or12" method="post">
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <div class="govuk-!-padding-bottom-17"></div>
+          </form>
+
+
+</div>
+</div>
+
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h5 class="govuk-heading-m">Get help</h5>
+
+        <div class="govuk-!-padding-bottom-1"></div>
+        <a href="s23-guidance.html" class="govuk-link" rel="noreferrer noopener" target="_blank">Guidance for DS1500 (opens in new tab)</a>
+  
+
+        <div class="govuk-!-padding-bottom-3"></div>
+        <h6 class="govuk-heading-s">Telephone</h6>
+
+        <ul class="govuk-list">
+          <li>0300 303 5035</li>
+          <li>24-hour service</li>
+        </ul>
+
+        <h6 class="govuk-heading-s">Email</h6>
+
+        <ul class="govuk-list">
+          <li><a href="ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+          <li>24-hour service</li>
+        </ul>
+      </div>
+
+    </div>
+    </div>
+
+{% endblock %}
