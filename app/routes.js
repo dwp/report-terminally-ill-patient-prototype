@@ -31,7 +31,7 @@ router.get('/sr1/sr1-start', function(req, res) {
 
 
 
-router.route ('/el1/el1-6or12')
+router.route ('/sr1/sr1-6or12')
 .post ((req, res, next) => {
     let redirectUrl
     // console.table(req.body)
@@ -41,6 +41,25 @@ router.route ('/el1/el1-6or12')
             redirectUrl = '/sr1/sr1-start'
             break
             case '6-months':
+                redirectUrl = '/v14-start'
+                break
+                default:
+                    redirectUrl = req.path
+                    break
+    }
+    res.redirect(redirectUrl)
+})
+
+router.route ('/sr1/sr1-ratip')
+.post ((req, res, next) => {
+    let redirectUrl
+    // console.table(req.body)
+    console.log(req.body.sr1Start)
+    switch (req.body.sr1Start) {
+        case 'sr1':
+            redirectUrl = '/sr1/sr1-start'
+            break
+            case 'ds1500':
                 redirectUrl = '/v14-start'
                 break
                 default:
