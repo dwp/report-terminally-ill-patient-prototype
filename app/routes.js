@@ -19,7 +19,7 @@ router.get('/sr1/sr1-dob', function(req, res) {
     res.render('sr1/sr1-dob');
 });
 
-router.get('/sr1/sr1-ratip', function(req, res) {
+router.get('/sr1/1sr1-ratip', function(req, res) {
     res.render('sr1/1sr1-ratip');
 });
 
@@ -27,6 +27,9 @@ router.get('/sr1/sr1-start', function(req, res) {
     res.render('sr1/sr1-start');
 });
 
+router.get('/sr1/', function(req, res) {
+    res.render('sr1/3sr1-ratip');
+});
 
 
 
@@ -67,8 +70,34 @@ router.route ('/sr1/sr1-ratip')
                     break
     }
     res.redirect(redirectUrl)
+
+
 })
 
+
+router.route ('/sr1/sr1-age')
+.post ((req, res, next) => {
+    let redirectUrl
+    // console.table(req.body)
+    console.log(req.body.ageq)
+    switch (req.body.ageq) {
+        case 'under16':
+            redirectUrl = '/v14-start'
+            break
+            case 'over66':
+                redirectUrl = '/v14-start'
+                break
+                case 'under16over66':
+                redirectUrl = '/sr1/sr1-6or12'
+                break
+                default:
+                    redirectUrl = req.path
+                    break
+                    
+                    
+    }
+    res.redirect(redirectUrl)
+})
 // Add your routes here - above the module.exports line
 
 module.exports = router
