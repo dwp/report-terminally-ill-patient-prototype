@@ -55,6 +55,10 @@ router.get('/sr1/', function(req, res) {
     res.render('sr1/sr1-guidance');
 });
 
+router.get('/sr1/sr1-guidance', function(req, res) {
+    res.render('sr1/sr1-guidance');
+});
+
 
 
 
