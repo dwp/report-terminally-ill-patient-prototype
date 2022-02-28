@@ -23,8 +23,16 @@ router.get('/sr1/1sr1-ratip', function(req, res) {
     res.render('sr1/1sr1-ratip');
 });
 
+router.get('/sr11sr1-or-ratip', function(req, res) {
+    res.render('sr1/sr1-ratip');
+});
+
 router.get('/sr1/sr1-start', function(req, res) {
     res.render('sr1/sr1-start');
+});
+
+router.get('/sr1/', function(req, res) {
+    res.render('sr1/sr1-ratip');
 });
 
 router.get('/sr1/', function(req, res) {
@@ -69,7 +77,7 @@ router.route ('/sr1/sr1-6or12')
     res.redirect(redirectUrl)
 })
 
-router.route ('/sr1/sr1-ratip')
+router.route ('/sr1/sr1-or-ratip')
 .post ((req, res, next) => {
     let redirectUrl
     // console.table(req.body)
