@@ -35,6 +35,14 @@ router.get('/sr1/', function(req, res) {
     res.render('sr1/4sr1-ratip');
 });
 
+router.get('/sr1/4sr1-ratip', function(req, res) {
+    res.render('sr1/4sr1-ratip');
+});
+
+router.get('/sr1/4sr1-ratip', function(req, res) {
+    res.render('sr1/4sr1-ratip');
+});
+
 router.get('/sr1/', function(req, res) {
     res.render('sr1/guidance');
 });
