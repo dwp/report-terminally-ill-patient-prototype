@@ -35,6 +35,10 @@ router.get('/sr1/', function(req, res) {
     res.render('sr1/4sr1-ratip');
 });
 
+router.get('/sr1/', function(req, res) {
+    res.render('sr1/guidance');
+});
+
 
 
 
@@ -97,6 +101,25 @@ router.route ('/sr1/sr1-age')
                 default:
                     redirectUrl = req.path
                     break
+                    
+                    
+    }
+    res.redirect(redirectUrl)
+})
+
+router.route ('/sr1/4sr1-ratip')
+.post ((req, res, next) => {
+    let redirectUrl
+    // console.table(req.body)
+    console.log(req.body.all1)
+    switch (req.body.all1) {
+        case 'yes':
+            redirectUrl = '/v14-start'
+            break
+            case 'no':
+                redirectUrl = '/sr1/sr1-start'
+                break
+            
                     
                     
     }
