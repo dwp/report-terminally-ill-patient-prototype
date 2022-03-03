@@ -59,6 +59,18 @@ router.get('/sr1/sr1-guidance', function(req, res) {
     res.render('sr1/sr1-guidance');
 });
 
+router.get('/sr1/', function(req, res) {
+    res.render('sr1/1final-start');
+});
+router.get('/sr1/', function(req, res) {
+    res.render('sr1/2final-start');
+});
+
+router.get('/sr1/2final-sr1-or-ratip', function(req, res) {
+    res.render('sr1/2final-sr1-or-ratip');
+});
+
+
 
 
 
