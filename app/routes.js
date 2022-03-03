@@ -70,6 +70,10 @@ router.get('/sr1/2final-sr1-or-ratip', function(req, res) {
     res.render('sr1/2final-sr1-or-ratip');
 });
 
+router.get('/sr1/', function(req, res) {
+    res.render('sr1/final-ds1500');
+});
+
 
 
 
@@ -103,7 +107,28 @@ router.route ('/sr1/sr1-or-ratip')
             redirectUrl = '/sr1/sr1-start'
             break
             case 'ds1500':
-                redirectUrl = '/v14-start'
+                redirectUrl = '/final-ds1500'
+                break
+                default:
+                    redirectUrl = req.path
+                    break
+    }
+    res.redirect(redirectUrl)
+
+
+})
+
+router.route ('/sr1/1final-start')
+.post ((req, res, next) => {
+    let redirectUrl
+    // console.table(req.body)
+    console.log(req.body.sr1Start)
+    switch (req.body.sr1Start) {
+        case 'sr1':
+            redirectUrl = '/sr1/sr1-start'
+            break
+            case 'ds1500':
+                redirectUrl = '/sr1/final-ds1500'
                 break
                 default:
                     redirectUrl = req.path
