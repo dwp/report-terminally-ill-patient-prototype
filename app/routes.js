@@ -74,6 +74,10 @@ router.get('/sr1/', function(req, res) {
     res.render('sr1/ds1500-page');
 });
 
+router.get('/sr1/', function(req, res) {
+    res.render('sr1/sr1-start-1');
+});
+
 
 
 
