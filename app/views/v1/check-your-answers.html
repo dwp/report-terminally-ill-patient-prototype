@@ -1,0 +1,336 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers - Report a terminally ill patient (DS1500) - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="s23-all">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full-from-desktop">
+
+      <h1 class="govuk-heading-xl">Check your answers before sending your report</h1>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          This page cannot be saved. If you leave this page before selecting 'Accept and send', any changes and entries you have made will be lost.</div>
+
+
+      <h2 class="govuk-heading-m">Patient details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Full name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['patient-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['patient-birth-day'] }}
+            {{ data['patient-birth-month'] }}
+            {{ data['patient-birth-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['patient-address'] }}
+            <br>{{ data['patient-address-1'] }}
+            <br>{{ data['patient-town'] }}
+            <br>{{ data['patient-county'] }}
+            <br>{{ data['patient-post-code'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['national-insurance-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> national insurance number</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Diagnosis</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Diagnosis
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['diagnosis'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> diagnosis</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of diagnosis
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['diagnosis-month'] }}
+            {{ data['diagnosis-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> diagnosis date</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Other diagnosis
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['other-diagnosis'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> other diagnosis</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Is the patient aware of their prognosis?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['patient-awareness'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> Is the patient aware of their prognosis</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Who asked you to complete this form?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['form-request'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> Who asked you to complete this form</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Clinical features</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Give details of the clinical features that indicate a severe progressive condition
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['clinical-features'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> clinical features</span>
+            </a>
+          </dd>
+        </div>
+        </dl>
+
+      <h2 class="govuk-heading-m">Treatment</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Give details of the clinical features that indicate a severe progressive condition
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['treatment-details'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> treatment details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Give details of planned future treatments or interventions
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['treatment-further-details'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> other treatments</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Your details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            I am the patient’s
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['your-relationship'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> your relationship to patient</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your GMC number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['GMC-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> your name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['your-name'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> your name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your Trust
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['your-trust'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> your trust</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['your-address'] }}
+            <br>{{ data['your-address-1'] }}
+            <br>{{ data['your-town'] }}
+            <br>{{ data['your-county'] }}
+            <br>{{ data['your-post-code'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> your address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['your-phone-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="s23-all">
+              Change
+              <span class="govuk-visually-hidden"> your phone number</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-l">Declaration</h2>
+
+      <p>You confirm that:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the person named in this report is your patient</li>
+        <li>this is a full report of their condition and treatment</li>
+      </ul>
+
+      <form action="s23-download" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <div class="govuk-!-padding-bottom-3"></div>
+
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Accept and send
+        </button>
+        <p class="govuk-body"><a href="s23-guidance.html" class="govuk-link" rel="noreferrer noopener" target="_blank">Guidance for DS1500 (opens in new tab)</a> </p>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

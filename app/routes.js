@@ -150,7 +150,7 @@ router.route ('/sr1/2final-sr1-or-ratip')
     console.log(req.body.sr1Start)
     switch (req.body.sr1Start) {
         case 'sr1':
-            redirectUrl = '/sr1/sr1-start'
+            redirectUrl = '/sr1/sr1-page'
             break
             case 'ds1500':
                 redirectUrl = '/sr1/ds1500-page'
@@ -207,6 +207,29 @@ router.route ('/sr1/4sr1-ratip')
     }
     res.redirect(redirectUrl)
 })
+
+
+router.route ('/v1/2final-sr1-or-ratip')
+.post ((req, res, next) => {
+    let redirectUrl
+    // console.table(req.body)
+    console.log(req.body.sr1Start)
+    switch (req.body.sr1Start) {
+        case 'sr1':
+            redirectUrl = '/v1/sr1-page'
+            break
+            case 'ds1500':
+                redirectUrl = '/v1/ds1500-page'
+                break
+                default:
+                    redirectUrl = req.path
+                    break
+    }
+    res.redirect(redirectUrl)
+
+
+})
+
 // Add your routes here - above the module.exports line
 
 module.exports = router

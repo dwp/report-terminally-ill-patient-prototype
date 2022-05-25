@@ -1,0 +1,481 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Details - Report a terminally ill patient (DS1500) - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="2final-sr1-or-ratip.html">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-grid-row-2">
+
+      <h1 class="govuk-heading-xl">
+        Send an SR1
+      </h1>
+
+    </div>
+
+    <p>This page can't be saved. If you leave this page before pressing submit any changes you have made will be lost.</p>
+
+    <h2 class="govuk-heading-l">Patient details</h2>
+    <div class="govuk-!-padding-bottom-1"></div>
+
+    <form class="form" action="v14-check-your-answers" method="post">
+
+      <div class="govuk-form-group">
+<h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="full-name">
+  Full name
+  </label>
+</h3>
+<div class="govuk-form-group">
+  <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name">
+</div>
+        <div class="govuk-!-padding-bottom-1"></div>
+
+        <div class="govuk-form-group">
+          <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="patient-address">
+            Address
+          </label>
+          </h3>
+          <textarea class="govuk-textarea" id="patient-address" name="patient-address" rows="5" aria-describedby="patient-address-hint"></textarea>
+        </div>
+
+        <div class="govuk-form-group">
+          <h3 class="govuk-heading-m">Postcode</h3>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
+
+
+        <div class="govuk-!-padding-bottom-3"></div>
+
+          <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h3 class="govuk-fieldset__heading">
+        Date of birth
+      </h3>
+    </legend>
+    <div id="dob-hint" class="govuk-hint">
+      For example, 31 3 1980.
+    </div>
+    <div class="govuk-date-input" id="dob">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob" type="text" autocomplete="bday-day" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob" type="text" autocomplete="bday-month" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob" type="text" autocomplete="bday-year" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+    </div>
+
+    <div class="govuk-!-padding-bottom-7"></div>
+
+    <div class="govuk-form-group">
+      <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+        National Insurance number
+      </label>
+      </h3>
+      <ul class="govuk-list">
+      <div id="national-insurance-number-hint" class="govuk-hint">
+          <li>This form is processed quicker if you have it</li>
+      </div>
+      </ul>
+      <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+    </div>
+
+    <div class="govuk-!-padding-bottom-7"></div>
+
+      <h2 class="govuk-heading-l">Diagnosis</h2>
+    <div class="govuk-!-padding-bottom-1"></div>
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="126">
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-hint">
+          Include details of the patient’s main diagnosis
+        </label>
+        </h3>
+        <textarea class="govuk-textarea govuk-js-character-count" id="more-detail-hint" name="more-detail-hint" rows="5" aria-describedby="more-detail-hint-info more-detail-hint-hint"></textarea>
+      </div>
+
+      <div id="more-detail-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 126 characters
+      </div>
+
+    </div>
+
+    <div class="govuk-!-padding-bottom-2"></div>
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="dod-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h3 class="govuk-fieldset__heading">
+        Date of diagnosis
+      </h3>
+    </legend>
+    <div id="dod-hint" class="govuk-hint">
+      For example, 3 2020.
+    </div>
+    <div class="govuk-date-input" id="dod">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dod-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dod-month" name="dod-month" type="text" autocomplete="diagnosis-month" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dod-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dod-year" name="dod-year" type="text" autocomplete="diagnosis-year" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+    </div>
+
+    <div class="govuk-!-padding-bottom-7"></div>
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="132">
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-hint">
+          Other relevant diagnoses? (optional)
+        </label>
+        </h3>
+        <textarea class="govuk-textarea govuk-js-character-count" id="more-detail-hint" name="more-detail-hint" rows="5" aria-describedby="more-detail-hint-info more-detail-hint-hint"></textarea>
+      </div>
+
+      <div id="more-detail-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 132 characters
+      </div>
+
+    </div>
+
+
+    <div class="govuk-!-padding-bottom-3"></div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h3 class="govuk-fieldset__heading">
+            Is the patient aware of their prognosis?
+          </h3>
+        </legend>
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="prognosis" name="prognosis" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="prognosis">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="prognosis-2" name="prognosis" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="prognosis">
+              No
+            </label>
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+<div class="govuk-!-padding-bottom-3"></div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h3 class="govuk-fieldset__heading">
+            Who asked you to complete the form?
+          </h3>
+        </legend>
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="representative" name="representative" type="radio" value="The patient" data-aria-controls="conditional-representative">
+            <label class="govuk-label govuk-radios__label" for="representative">
+              Patient
+            </label>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="representative-2" name="representative" type="radio" value="A representative of the patient" data-aria-controls="conditional-contact-2">
+            <label class="govuk-label govuk-radios__label" for="representative-2">
+              Representative
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+            <div class="govuk-form-group">
+              <div class="govuk-!-padding-bottom-2"></div>
+              <h4 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-1">
+                Representative details
+              </label>
+              </h4>
+              <div class="govuk-form-group">
+                <div class="govuk-!-padding-bottom-3"></div>
+                <h5 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="representative-name">
+                  Name
+                </label>
+                </h5>
+                <input class="govuk-input" id="representative-name" name="representative-name" type="text">
+              </div>
+              <div class="govuk-!-padding-bottom-1"></div>
+              <div class="govuk-form-group">
+                <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="patient-address">
+                  Address
+                </label>
+                </h3>
+                <textarea class="govuk-textarea" id="patient-address" name="patient-address" rows="5" aria-describedby="patient-address-hint"></textarea>
+              </div>
+
+              <div class="govuk-form-group">
+                <h3 class="govuk-heading-s">Postcode</h3>
+                <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code"></div>
+
+            </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+<div class="govuk-!-padding-bottom-6"></div>
+
+    <h2 class="govuk-heading-l">Clinical features</h2>
+    <div class="govuk-!-padding-bottom-1"></div>
+
+    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="236">
+      <div class="govuk-form-group">
+        <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail-hint">
+          Give details of the clinical features that indicate a severe progressive condition.
+        </label>
+        </h3>
+        <div id="more-detail-hint-hint" class="govuk-hint">
+          For example: the rate of progression, recurrence, staging, tumour markers, CD4 count and viral load, bulbar involvement, respiratory problems, heart failure.
+        </div>
+        <textarea class="govuk-textarea govuk-js-character-count" id="more-detail-hint" name="more-detail-hint" rows="5" aria-describedby="more-detail-hint-info more-detail-hint-hint"></textarea>
+      </div>
+
+      <div id="more-detail-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+        You can enter up to 236 characters
+      </div>
+
+    </div>
+
+
+</div>
+
+</div>
+
+<div class="govuk-!-padding-bottom-1"></div>
+
+    <h2 class="govuk-heading-l">Treatment</h2>
+      <div class="govuk-!-padding-bottom-1"></div>
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="160">
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="with-hint">
+              Give details of treatments
+            </label>
+            </h1>
+            <div id="with-hint-hint" class="govuk-hint">
+              Including the dates and the patient's response to the treatment.
+            </div>
+            <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+          </div>
+
+          <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+            You can enter up to 160 characters
+          </div>
+
+        </div>
+
+        <div class="govuk-!-padding-bottom-4"></div>
+
+
+        <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="120">
+            <div class="govuk-form-group">
+              <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="with-hint">
+                Give details of planned future treatments or interventions
+              </label>
+              </h3>
+              <div id="with-hint-hint" class="govuk-hint">
+                Including if the planned treatments or interventions could significantly change the progression of the patient's condition.
+              </div>
+              <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+            </div>
+
+            <div id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+              You can enter up to 120 characters
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+
+
+<div class="govuk-!-padding-bottom-6"></div>
+
+<h2 class="govuk-heading-l">Your details</h2>
+      <div class="govuk-!-padding-bottom-1"></div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h3 class="govuk-fieldset__heading">
+              I am the patient's
+            </h3>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                Specialist nurse
+              </label>
+            </div>
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="General Practitioner" data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-radios__label" for="contact">
+                General Practitioner
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-email">
+                  Your GMC number
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="text" spellcheck="false"></div>
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="GMC registered consultant" data-aria-controls="conditional-contact-3">
+              <label class="govuk-label govuk-radios__label" for="contact-3">
+                GMC registered consultant
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-3">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-phone">
+                  Your GMC number
+                </label>
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="text" spellcheck="false"></div>
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="Other" data-aria-controls="conditional-contact-4">
+              <label class="govuk-label govuk-radios__label" for="contact-4">
+                Other
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-4">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-text">
+                  Please specify
+                </label>
+                <input class="govuk-input govuk-!-width-two-thirds" id="contact-by-text" name="contact-by-text" type="text" spellcheck="false"></div>
+
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+        <div class="govuk-form-group">
+<h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="your-name">
+    Your full name
+  </label>
+</h3>
+<div class="govuk-form-group">
+  <input class="govuk-input" id="your-name" name="your-name" type="text" spellcheck="false" autocomplete="name">
+
+  <div class="govuk-!-padding-bottom-2"></div>
+
+
+
+</div>
+
+  <div class="govuk-form-group">
+    <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="patient-address">
+      Your Trust address
+    </label>
+    </h3>
+    <div id="your-trust-hint" class="govuk-hint">
+      If you are not a part of a Trust, this could be your Clinical Commissioning Group (CCG) or surgery.<div class="govuk-form-group">
+      <div class="govuk-!-padding-bottom-3"></div>
+      <textarea class="govuk-textarea" id="patient-address" name="patient-address" rows="5" aria-describedby="patient-address-hint"></textarea>
+  </div>
+
+<div class="govuk-!-padding-bottom-1"></div>
+
+  <div class="govuk-form-group">
+    <h3 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="your-number">
+      Your phone number
+    </label>
+    </h3>
+    <div class="govuk-form-group">
+      <input class="govuk-input govuk-input--width-10" id="your-number" name="your-number" type="text"></div>
+
+    <div class="govuk-!-padding-bottom-3"></div>
+
+
+    <form class="form" action="v14-check-your-answers.html" method="post">
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+  </div>
+    </div>
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+          <div class="govuk-grid-column-one-third">
+
+            <div class="govuk-inset-text">
+              <h2 class="govuk-heading-m">Get help</h2>
+
+              <a href="sr1-guidance.html" class="govuk-link" rel="noreferrer noopener" target="_blank">Guidance for DS1500 and SR1 (opens in new tab)</a>
+              <div class="govuk-!-padding-bottom-2"></div>
+
+              <h3 class="govuk-heading-s">Telephone</h3>
+
+              <ul class="govuk-list">
+                <li>0300 303 5035</li>
+                <li>24-hour service</li>
+              </ul>
+
+              <h3 class="govuk-heading-s">Email</h3>
+
+              <ul class="govuk-list">
+                <li><a href="ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+                <li>24-hour service</li>
+              </ul>
+            </div>
+          </div>
+
+{% endblock %}
