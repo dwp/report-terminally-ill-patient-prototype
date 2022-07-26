@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Report a terminally ill patient (DS1500) - GOV.UK
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">  
+      <form class="form" action="/sr1/4sr1-ratip" method="post">
+
+      <div class="govuk-grid-row-2">
+
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Important
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <p class="govuk-notification-banner__heading">
+              From 4 April 2022,  there are changes  to the 
+              <a class="govuk-notification-banner__link" href="#">Special Rules process</a> in the benefit system.
+            </p>
+          </div>
+        </div>
+
+    </style>
+        <h1 class="govuk-heading-xl">
+          Report a patient who has less than 6 months to live (DS1500)
+        </h1>
+
+      <p>Use this service to tell the Department of Work and Pensions that
+        you have a patient who:</p>
+
+
+      <ul class="govuk-list govuk-list--bullet">
+ 
+ 
+ 
+        <li>has a progressive disease and, as a consequence of that disease you would not be surprised if your patient were to die within 6 months</li>
+      </ul>
+
+
+
+     
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset"
+        aria-describedby="el1-start">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Do you want to report a patient who has less than 6 months to live?
+            </h1>
+          </legend>
+          <div class="govuk-!-padding-bottom-1"></div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="all1" name="all1" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="v14-start">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="all12" name="all1" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="sr1-start">
+                No - I want to report a pateint who has 6-12 months to live
+              </label>
+            </div>
+      
+          </div>
+          <div class="govuk-inset-text">
+            You will not face any negative consequences, if this proves to be incorrect.
+          </div>
+      
+        </fieldset>
+      </div>
+
+
+      <button class="govuk-button" data-module="govuk-button">
+        Continue
+      </button>
+    </form>
+ 
+  
+  
+
+
+</div>
+</div>
+
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h5 class="govuk-heading-m">Get help</h5>
+
+        <div class="govuk-!-padding-bottom-1"></div>
+        <a href="s23-guidance.html" class="govuk-link" rel="noreferrer noopener" target="_blank">Guidance for DS1500 (opens in new tab)</a>
+  
+
+        <div class="govuk-!-padding-bottom-3"></div>
+        <h6 class="govuk-heading-s">Telephone</h6>
+
+        <ul class="govuk-list">
+          <li>0300 303 5035</li>
+          <li>24-hour service</li>
+        </ul>
+
+        <h6 class="govuk-heading-s">Email</h6>
+
+        <ul class="govuk-list">
+          <li><a href="ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+          <li>24-hour service</li>
+        </ul>
+      </div>
+
+    </div>
+    </div>
+
+{% endblock %}

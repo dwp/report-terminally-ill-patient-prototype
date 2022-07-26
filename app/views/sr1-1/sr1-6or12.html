@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Report a terminally ill patient (DS1500) - GOV.UK
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/sr1/sr1-6or12" method="post">
+
+      <div class="govuk-grid-row-2">
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset"
+          aria-describedby="el1-start">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Does the patient have:
+              </h1>
+            </legend>
+            <div class="govuk-!-padding-bottom-1"></div>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="el1-start1" name="el1Start" type="radio" value="12-months">
+                <label class="govuk-label govuk-radios__label" for="el1Start1">
+                  Between 6 and 12 months to live
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="v14-start" name="el1Start" type="radio" value="6-months">
+                <label class="govuk-label govuk-radios__label" for="v14-start">
+                  Less than 6 months to live
+                </label>
+              </div>
+        
+            </div>
+            <div class="govuk-inset-text">
+              You will not face any negative consequences, if this proves to be incorrect.
+            </div>
+        
+          </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </form>
+
+
+</div>
+</div>
+
+
+
+
+    <div class="govuk-grid-column-one-third">
+
+      <div class="govuk-inset-text">
+        <h5 class="govuk-heading-m">Get help</h5>
+
+        <div class="govuk-!-padding-bottom-1"></div>
+        <a href="s23-guidance.html" class="govuk-link" rel="noreferrer noopener" target="_blank">Guidance for DS1500 (opens in new tab)</a>
+  
+
+        <div class="govuk-!-padding-bottom-3"></div>
+        <h6 class="govuk-heading-s">Telephone</h6>
+
+        <ul class="govuk-list">
+          <li>0300 303 5035</li>
+          <li>24-hour service</li>
+        </ul>
+
+        <h6 class="govuk-heading-s">Email</h6>
+
+        <ul class="govuk-list">
+          <li><a href="ssd.nationalservicedesk@nhs.net">ssd.nationalservicedesk@nhs.net</a></li>
+          <li>24-hour service</li>
+        </ul>
+      </div>
+
+    </div>
+    </div>
+
+{% endblock %}

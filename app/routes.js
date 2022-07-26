@@ -230,6 +230,11 @@ router.route ('/v1/2final-sr1-or-ratip')
 
 })
 
+//outer.use(
+    //"/sr1-1/",
+    //require("./views/sr1-1")
+//);
+
 // Add your routes here - above the module.exports line
 
 module.exports = router
