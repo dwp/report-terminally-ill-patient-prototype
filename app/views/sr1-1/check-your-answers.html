@@ -103,7 +103,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Date of diagnosis
+            What is the diagnosis?
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['diagnosis-month'] }}
@@ -118,7 +118,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Other diagnosis
+            Other relevant diagnosis (optional)
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['other-diagnosis'] }}
@@ -185,7 +185,7 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Give details of the purpose and response to past or current treatment
+            Tell us about the purpose of any treatment and the response
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['treatment-details'] }}
@@ -217,6 +217,25 @@
             </a>
           </dd>
         </div>
+
+        {% if (data['your-relationship'] == "contact-nurse") %}
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your NMC number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['contact-nurse'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="sr1-page">
+              Change
+              <span class="govuk-visually-hidden"> your name</span>
+            </a>
+          </dd>
+        </div>
+{% endif %}
+
        
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
