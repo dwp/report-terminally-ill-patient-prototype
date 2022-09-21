@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-The service is temporarily unavailable - Send an SR1 - GOV.UK
+Sorry, we cannot authorise you to use this service - Send an SR1 - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,32 +15,47 @@ The service is temporarily unavailable - Send an SR1 - GOV.UK
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-l">
-      Please try again shortly
+      Sorry, we cannot authorise you to use this service - error 403
       </h1>
 
    
+      <p>Only specific job roles are authorised to complete an SR1 form.</p>
 
-      <p>If the problem continues, you can complete PDF versions of the SR1 and the fee claim forms online. You won’t need to sign them, but you’ll need to return them to us from an <kbd>nhs.net </kbd> or <kbd>nhs.wales.uk</kbd> email address. Emails from any other addresses will be automatically deleted. If you do not have one of these email addresses, ask your local IT helpdesk to provide one.</p>
-
-      <p>Sign in to the NHS Spine Portal and try launching the SR1 service again. If you’re still not able to log in, you can complete a PDF version of the SR1 form and the fee claim form which you can email back to us.</p>
-
-      <p>The PDF versions do not need a signature, but you’ll need to return them from an <kbd>nhs.net</kbd> or an <kbd>nhs.wales.uk</kbd> email address. Emails from any other addresses will be automatically deleted. If you do not have one of these email addresses, ask your local IT helpdesk to provide one.</p>
-      
-      <p>Please provide the following information by e-mail from your current NHS.net or nhs.wales.uk email address:</p>
-
-  
-
-  
-<h2 class="govuk-heading-m">Clerical return</h2>
-   
+      <p>These are:</p>
 <ul class="govuk-list govuk-list--bullet">
-  <li>your work address and phone number</li>
-  <li>your <kbd>nhs.net</kbd> or <kbd>nhs.wales.uk</kbd> email address</li>
-  <li>a list of medical professionals using the same email address who can complete the SR1 form</li>
-  <li>whether you need just the SR1 form or the fee claim form as well</li>
+  <li>GP</li>
+  <li>hospital consultant</li>
+  <li>specialty doctor</li>
+  <li>hospice doctor</li>
+  <li>senior nurse employed at Band 7 or 8, who may be working as a clinical nurse specialist, advanced nurse practitioner or similar</li>
 
 </ul>
+<p>Your job role is checked against the job role on your NHS smart card. If you should have access to this service, make sure your smart card is correct. If it’s wrong, your IT support team will be able to help.</p>
+<p>If you do not have an account to log incidents with the <a href="https://www.nhscfhservicedesk.nhs.uk%5D,">NHS National Service Desk</a> call 0300 303 5035.</p>
 
-<p>Email this information with your request to <a href="#">form.e-sr1@dwp.gov.uk</a>.</p>
+<h2 class="govuk-heading-m">What you can do if the problem continues</h2>
+
+<p>You can complete PDF versions of the SR1 and the fee claim forms online. They do not need to be signed, but you’ll need to return them to us from a secure email address. Any email that does not come from a secure email address will be automatically deleted.</p>
+
+<p>Secure email addresses end in:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><kbd>@nhs.net</kbd></li>
+  <li><kbd>@nhs.uk</kbd></li>
+  <li><kbd>@nhs.scot</kbd></li>
+  <li><kbd>@nhs.wales.uk</kbd></li>
+  <li><kbd>@gov.uk</kbd></li> 
+  </ul>
+
+<p>Send the request for a PDF version of the SR1 form, and fee claim form if needed, from your secure email address to <a href="#">form.e-sr1@dwp.gov.uk.</a></p>
+<p>Please include your:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>surgery /hospital/ postal address</li>
+  <li>phone number</li>
+
+ 
+</ul>
+
+
+
 <p>Do not encrypt any part of the email.</p>
 {% endblock %}
