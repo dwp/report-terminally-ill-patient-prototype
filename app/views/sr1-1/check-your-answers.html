@@ -52,6 +52,20 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['national-insurance-number'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="sr1-page">
+              Change
+              <span class="govuk-visually-hidden"> national insurance number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
             Address
           </dt>
           <dd class="govuk-summary-list__value">
@@ -70,18 +84,19 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            National Insurance number
+            Postcode
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['national-insurance-number'] }}
+            {{ data['patient-postcode'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="vsr1-page">
+            <a href="sr1-page">
               Change
-              <span class="govuk-visually-hidden"> national insurance number</span>
+              <span class="govuk-visually-hidden">postcode</span>
             </a>
           </dd>
         </div>
+       
       </dl>
 
       <h2 class="govuk-heading-m">Diagnosis</h2>
@@ -89,10 +104,10 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Diagnosis
+            What is the diagnosis?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['diagnosis'] }}
+            {{ data['what-is-diagnosis'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="sr1-page">
@@ -103,9 +118,10 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            What is the diagnosis?
+           Date of diagnosis
           </dt>
           <dd class="govuk-summary-list__value">
+            {{ data['diagnosis-day'] }}
             {{ data['diagnosis-month'] }}
             {{ data['diagnosis-year'] }}
           </dd>
@@ -118,7 +134,23 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Other relevant diagnosis (optional)
+            Date from which the patient is thought to meet the Special Rules
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['special-rules-day'] }}
+            {{ data['special-rules-month'] }}
+            {{ data['special-rules-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="sr1-page">
+              Change
+              <span class="govuk-visually-hidden"> special rules date</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Other relevant diagnosis
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['other-diagnosis'] }}
@@ -135,7 +167,7 @@
             Is the patient aware of their diagnosis?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['patient-awareness'] }}
+            {{ data['diagnosis'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="sr1-page">
@@ -149,7 +181,7 @@
             Is the patient aware of their prognosis?
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['patient-awareness'] }}
+            {{ data['prognosis'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="sr1-page">
@@ -185,7 +217,8 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Tell us about the purpose of any treatment and the response
+            
+Give details of relevant past or current treatment, its purpose and any response seen
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['treatment-details'] }}
@@ -225,15 +258,50 @@
             Your NMC number
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['contact-nurse'] }}
+            {{ data['nmc-number'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="sr1-page">
               Change
-              <span class="govuk-visually-hidden"> your name</span>
+              <span class="govuk-visually-hidden"> your NMC number</span>
             </a>
           </dd>
         </div>
+{% endif %}
+{% if (data['your-relationship'] == "contact-gp") %}
+
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Your GMC number
+  </dt>
+  <dd class="govuk-summary-list__value">
+    {{ data['contact-gp'] }}
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a href="sr1-page">
+      Change
+      <span class="govuk-visually-hidden"> your name</span>
+    </a>
+  </dd>
+</div>
+{% endif %}
+
+{% if (data['your-relationship'] == "contact-gmc") %}
+
+<div class="govuk-summary-list__row">
+  <dt class="govuk-summary-list__key">
+    Your GMC number
+  </dt>
+  <dd class="govuk-summary-list__value">
+    {{ data['contact-gmc'] }}
+  </dd>
+  <dd class="govuk-summary-list__actions">
+    <a href="sr1-page">
+      Change
+      <span class="govuk-visually-hidden"> your name</span>
+    </a>
+  </dd>
+</div>
 {% endif %}
 
        
@@ -280,6 +348,22 @@
             <a href="sr1-page">
               Change
               <span class="govuk-visually-hidden"> your address</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Your postcode
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['address-postcode'] }}
+          
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="sr1-page">
+              Change
+              <span class="govuk-visually-hidden"> your postcode</span>
             </a>
           </dd>
         </div>
