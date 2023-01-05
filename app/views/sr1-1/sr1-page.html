@@ -136,11 +136,16 @@ SR1 form - Send an SR1 - GOV.UK
       </h3>
     </legend>
     <div id="dod-hint" class="govuk-hint">
-      For example, 03 2020.
+      For example, 07 03 2020.
     </div>
     <div class="govuk-date-input" id="dod">
      
       <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="diagnosis-day">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="diagnosis-day" name="diagnosis-day" type="text" autocomplete="diagnosis-day" pattern="[0-9]*" inputmode="numeric"></div>
         <div class="govuk-form-group">
           <label class="govuk-label govuk-date-input__label" for="diagnosis-month">
             Month
@@ -166,11 +171,16 @@ SR1 form - Send an SR1 - GOV.UK
     </legend>
     <p>This might be the date of diagnosis, the date this form is being completed or any date in between. Providing this will ensure your patient is paid from the correct date.    </p>
     <div id="dob-hint" class="govuk-hint">
-      For example, 03 2020.
+      For example, 07 03 2020.
     </div>
     <div class="govuk-date-input" id="special-rules">
      
       <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="special-rules-month">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="special-rules-day" name="special-rules-day" type="text" autocomplete="special-rules-day" pattern="[0-9]*" inputmode="numeric"></div>
         <div class="govuk-form-group">
           <label class="govuk-label govuk-date-input__label" for="special-rules-month">
             Month
